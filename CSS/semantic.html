@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그</title>
+</head>
+<body>
+    <header>
+        <h1>헤더 타이틀</h1>
+        <img src="data:image/png;base64," alt="sample logo">
+        <!-- TODO: 웹페이지 메뉴 -->
+        <nav>
+            <ul>
+                <li><a href="">메뉴 1</a></li>
+                <li><a href="">메뉴 2</a></li>
+                <li><a href="">메뉴 3</a></li>
+                <li><a href="">메뉴 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>메인 타이틀</h2>
+        <p>
+            가장 중요한 내용을 메인에 작성
+
+        </p>
+        <!-- 가장 중요한 내용을 담고 있기 때문에 웹 페이지에
+        반복되지 않는 내용을 작성 -->
+        <!-- 하나의 웹페이지에 하나의 메인 사용 -->
+        
+        <section>
+            <h2>섹션 타이틀</h2>
+            <p>
+                섹션에 들어가는 내용들
+            </p>
+            <!-- 섹션에는 header, footer 태그를 포함 할 수 있음 -->
+        </section>
+        
+        <article>
+            <h1>게시물 제목</h1>
+            <article class="item">
+                <h2>아티클 헤더</h2>
+                <p>아티클 헤더 내용</p>
+            </article>
+            <article class="item">
+                <h2>아티클 헤더</h2>
+                <p>아티클 헤더 내용</p>
+            </article>
+            <article class="item">
+                <h2>아티클 헤더</h2>
+                <p>아티클 헤더 내용</p>
+            </article>
+        </article>
+        <!-- article은 하나의 독립적인 컨텐츠, section은 여러 컨텐츠의 묶음 -->
+        <figure>
+            <!-- 이미지, 삽화, 도표, 코드 사용 -->
+            <img src="data:image/jpeg;base64"
+         alt="Elephants">
+            <figcaption>코끼리 사진</figcaption>
+            <!-- 이미지에 대한 설명 -->
+        </figure>
+    </main>
+
+    <footer>
+        <h3>Posted by:</h3>
+        <p>Contact infomation:
+            <a href="mailto"></a>
+        </p>
+
+        <address>
+            <p>주소: 서울시 양천구 목1동 12345</p>
+            <p>전화번호: </p>
+            <p>이메일: <a href="mailto">@naver.com</a></p>
+        </address>
+    </footer>
+
+    <aside>
+        <h3>사이드 메뉴</h3>
+        <nav>
+            <ul>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- 홈페이지를 만들 때 시맨틱 태그를 이용해서 뼈대 구보를 잡아주면
+    div 태그에 아이디를 설정하는 것보다 만들기 수월해짐 -->
+    <!-- 시맨틱 태그로 뼈대구조 만들고 css로 정리 -->
+</body>
+</html>

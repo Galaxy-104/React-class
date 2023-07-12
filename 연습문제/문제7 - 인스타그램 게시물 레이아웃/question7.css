@@ -1,0 +1,351 @@
+body{
+    margin: 0; padding: 0;
+    width: 100%;
+    height: 100vw;
+}
+*{
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 0 30px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #fff;
+    max-width: 1000px;
+}
+nav .logo{
+    margin: auto 0;
+}
+nav .logo div{
+    width: 120px;
+    height: 32px;
+    background: url(https://i.namu.wiki/i/C9DgUkHfi6o7f1AWb529VHjHQeWtTFhVdFNc6YVScQzg4pARwRjBOWgidRveffl1j8ZqQbXQ40d64t1XVHL6Zw.svg) center no-repeat;
+    background-size: contain;
+}
+nav .search{
+    display: flex;
+    width: 280px;
+    margin: 8px;
+    position: relative;
+}
+nav .search div{
+    position: absolute;
+    top: 10px;
+    margin-left: 8px;
+}
+nav .search div .material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+nav .search div .material-symbols-outlined{
+    font-size: 20px;
+    color: rgb(142, 142, 142);
+}
+nav .search input{
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    padding-left: 40px;
+    background-color: rgb(239, 239, 239);
+    border: none;
+}
+nav .search input:focus{
+    padding-left: 8px;
+    outline: none;
+}
+nav .search input:focus + div{
+    display: none;
+}
+nav .search button{
+    position: absolute;
+    left: 250px;
+    top: 10px;
+    display: none;
+}
+nav .signup{
+    display: flex;
+    width: 160px;
+    height: 100%;justify-content: space-between;
+    align-items: center;
+}
+nav .signup .login button{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(0, 149, 246);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+}
+nav .signup .login button:hover{
+    background-color: #1877F2;
+    cursor: pointer;
+}
+nav .signup .join a{
+    color: rgb(0, 149, 246);
+    text-decoration: none;
+}
+nav .signup .join a:hover{
+    color: #000;
+}
+.container{
+    max-width: 1000px;
+    width: 100%;
+    height: 100vw;
+    padding: 60px 30px 0 30px;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-outline{
+    display: flex;
+    border: 1px solid lawngreen;
+    max-width: 720px;
+    margin: 0 30px;
+    align-items: center;
+}
+.header-outline .user-profile-img{
+    display: flex;
+    margin: 20px 40px;
+    border: solid 1px goldenrod;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.header-outline .user-profile-img *{
+    display: flex;
+}
+.header-outline .user-profile-img div{
+    flex-basis: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: #fff solid 3px;
+}
+.header-outline .user-profile-img div div{
+    background: url(https://cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/3MQ2TGE44QSRCEDYEWJ6HAJSSA.jpg) center no-repeat;
+    background-size: cover;
+}
+.header-outline .user-outline{
+    display: flex;
+    width: 50%;
+    height: 180px;
+    max-height: 180px;
+    max-width: 420px;
+    margin-left: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.header-outline .user-outline > div{
+    margin-bottom: 8px;
+}
+.user-outline .user-first-outline{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 420px;
+    height: 48px;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-outline .user-first-outline div:first-child{
+    margin-right: auto;
+    display: flex;
+}
+.user-outline .user-first-outline div:first-child div{
+    background: url(https://w7.pngwing.com/pngs/984/269/png-transparent-blue-check-logo-social-media-instagram-verified-badge-symbol-computer-icons-social-media-blue-leaf-influencer-marketing.png) center no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+}
+.user-outline .user-first-outline a{
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+}
+.user-outline .user-first-outline button{
+    border: none;
+    font-size: 14px;
+    border-radius: 6px;
+    height: 32px;
+    background-color: rgb(239, 239, 239);
+}
+.user-outline .user-first-outline button:hover{
+    background-color: rgb(222, 219, 219);
+    cursor: pointer;
+}
+.user-outline .user-second{
+    display: flex;
+    width: 100%; height: 1.5rem;
+    max-width: 360px;
+    max-height: 1.5rem;
+}
+.user-outline .user-second div{
+    flex-basis: 120px;
+}
+.user-outline .user-second a{
+    color: #000;
+    text-decoration: none;
+}
+.user-outline .user-second a:hover{
+    color: rgb(210, 210, 210);
+}
+.user-outline .user-second a{
+    font-size: 14px;
+}
+.user-inform{
+    height: 5rem;
+    width: 100%;
+    font-size: 14px;
+}
+.user-inform p{
+    margin: 0;
+}
+.user-inform p:nth-child(2){
+    color: rgb(115, 115, 115);
+}
+.main-container .story{
+    border: 1px solid aquamarine;
+    margin: 20px 30px 40px 30px ;
+    display: flex;
+    flex-direction: column;
+}
+.main-container .story div:first-child div{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 50%;
+    background: url(https://img1.daumcdn.net/thumb/C500x500/?fname=http://t1.daumcdn.net/brunch/service/user/4jyM/image/ApCGVgNo3Rh-6DT433umzzxSg9o.jpg) center no-repeat;
+    background-size: contain;
+    border: rgb(219 219 219) solid 1px;
+}
+.main-container .story div:last-child{
+    max-width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.main-container .story div span{
+    font-size: 14px;
+}
+.main-container .post-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border-top: 1px solid rgb(142, 142, 142);
+}
+.post-container .post-tag{
+    font-size: 12px;
+    display: flex;
+    margin: 24px auto;
+    width: 280px;
+    justify-content: space-around;
+}
+.post-container .post-tag div{
+    text-align: center;
+}
+.post-container .post-tag div .material-symbols-outlined{
+    font-size: 18px;
+}
+.post-container .post-tag div a{
+    text-decoration: none;
+    color: #000;
+}
+.post-container .post-contents{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.post-container .post-contents article{
+    border: 1px solid palevioletred; 
+    width: 270px;
+    height: 270px;
+}
+.related-accounts{
+    border: 1px solid gray;
+}
+.related-accounts .account-text{
+    border: 1px solid blue;
+    display: flex;
+    height: 48px;
+    justify-content: space-between;
+    padding: 0 20px ;
+}
+.related-accounts .account-text span{
+    height: 100%;
+    line-height: 52px;
+    font-size: 14px;
+}
+.related-accounts .account-text button{
+    background-color: #fff;
+    border: none;
+}
+.related-accounts .account-button{
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    box-sizing: content-box;
+}
+.related-accounts .account-button > div{
+    flex-basis: 180px;
+    max-width: 148px;
+    min-width: 148px;
+    height: 160px;
+    border: 1px solid hotpink;
+    margin: 4px;
+    padding: 15px;
+}
+.related-accounts .account-button .account-others{
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 5px 5px;
+}
+.related-accounts .account-button .account-others img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.container .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 160px;
+    padding: 30px 15px;
+}
+.container .footer .footer-first{
+    display: flex;
+    font-size: 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container footer .footer div{
+    display: flex;
+}
+.container .footer .footer-first div a{
+    text-decoration: none;
+}
+.container footer .footer-second{
+    display: flex;
+    justify-content: center;
+}
+.container footer .footer-second div{
+    margin: 0 5px;
+    font-size: 12px;
+}

@@ -1,0 +1,20 @@
+.box{
+  width: 50%; height: 200px;
+  background-color: orange;
+  font-size: 8rem;
+  max-width: 350px;
+  /* min-width: 500px; */
+  /* width의 크기가 %로 설정되어 있을 때 */
+}
+
+.box img{
+  width: 100%;
+}
+
+/* 디바이스의 크기가 700px이하로 줄어들 때 적용되는 스타일 */
+@media (max-width: 700px){
+  .box{
+    width: 100%;
+  }
+
+}

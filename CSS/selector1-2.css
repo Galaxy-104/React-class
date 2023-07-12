@@ -1,0 +1,17 @@
+address p:not(:nth-child(2)){
+  background-color: paleturquoise;
+}
+/* main *:not(main > p){
+  background-color: yellowgreen;
+} */
+/* main *:not(article){
+  background-color: burlywood;
+} */
+/* main *:not(article)을 사용할 경우
+article 내부의 h2, p와 같은 다른 태그들도 제외시키기 때문에
+article만 제외하고 디자인하기에 적절하지 않음  */
+main > *:not(article){
+  background-color: burlywood;
+}
+/* main > *:not(article)로 하면 main의 자식요소인 article을
+완전히 제외시키기 때문에 원하는대로 디자인 가능  */

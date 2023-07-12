@@ -1,0 +1,14 @@
+body{
+    margin: 0; padding: 0;
+}
+#container{
+    width: 100%; height: 100vh;
+    background: url('https://t1.daumcdn.net/cfile/tistory/99E3B33E5B2852742A') no-repeat center;
+    background-size: cover;
+    color: white;
+    font-size: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

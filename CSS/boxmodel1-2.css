@@ -1,0 +1,13 @@
+.box{
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  background-color: orange;
+  box-sizing: border-box;
+  /* border-box를 설정하면 레이아웃이 특정 범위 안에서는 깨지지 않음 */
+  vertical-align: top;
+  /* 텍스트를 기준으로 정렬하기 때문에 모든 박스의 정렬을 맞추기 위해 사용 */
+}
+.box:nth-child(2){
+  padding: 30px;
+}

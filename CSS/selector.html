@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <link rel="stylesheet" href="selector3.css">
+</head>
+<body>
+    <header>
+        <a href="/index.html" id="logo">
+            <img src="/imgs/brand-logo.jpg" alt="sample logo" width="50" height="40">
+            SunriseBucks
+        </a>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="/html/home.html">Home</a>
+                    <ul>
+                        <li><a href="https://www.naver.com" target="_blank">네이버</a></li>
+                        <li><a href="https://www.google.com" target="_blank">구글</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="/html/home.html">Home</a></li>
+                <li><a href="/html/about.html">About</a></li>
+                <li><a href="/html/service.html">Service</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+                <li><a href="/html/register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>main content</h2>
+        <p>주요 내용입니다.</p>
+        <section>
+            <h2>section title</h2>
+            <p>
+                section description
+            </p>
+        </section>
+
+        <article>
+            <h1>List title</h1>
+            <article class="item">
+                <h2>item title</h2>
+                <p>item description</p>
+            </article>
+            <!-- 클래스의 이름을 지정할 때는 적용하는 태그의 속성이나
+            지정하고 싶은 스타일을 이름으로 설정한다.  -->
+            <article class="item half-width">
+                <h2>item title</h2>
+                <p>item description</p>
+            </article>
+            <article class="item half-width highlight-color">
+                <h2>item title</h2>
+                <p>item description</p>
+            </article>
+        </article>
+
+        <figure>
+            <img src="imgs/elephants.jpeg" alt="Elephants">
+            <figcaption>Elephants</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <h3>Posted by: sunrise</h3>
+        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a></p>
+
+        <address>
+            <p>주소: 서울시 양천구 목1동 123-123</p>
+            <p>전화번호: 02-1234-1234</p>
+            <p>이메일: <a href="mailto:example@example.com">example@example.com</a></p>
+        </address>
+    </footer>
+
+    <aside>
+        <h3>사이드 메뉴</h3>
+        <nav>
+            <ul>
+                <li><a href="" class="side_menu">메뉴 1</a></li>
+                <li><a href="" target="_blank">메뉴 2</a></li>
+                <li><a href="" target="_blank">메뉴 3</a></li>
+                <li><a href="" target="_self" class="side_menu">메뉴 4</a></li>
+            </ul>
+        </nav>
+        <h4>사이드 메뉴</h4>
+        <nav>
+            <ul>
+                <li><a href="https://www.facebook.com" class="side_menu" target="_blank">페이스북</a></li>
+                <li><a href="https://www.instagram.com" target="_blank">인스타그램</a></li>
+                <li><a href="https://www.daum.net" target="_blank">다음</a></li>
+                <li><a href="https://www.linkedin.com" target="_blank" class="side_menu">링크드인</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <form action="">
+        <input type="text">
+        <button>보내기</button>
+    </form>
+</body>
+</html>

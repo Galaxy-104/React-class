@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <h1>테이블 태그</h1>
+    <table>
+        <caption>
+            <!-- caption 태그를 사용하면 설명 추가 가능
+            기본적으로 가운데 정렬되고, css를 통해 수정 가능 -->
+            <h2>테이블 제목</h2>
+            <p>테이블 설명을 이곳에 추가한다.</p>
+        </caption>
+        <thead>
+            <!-- 열 제목은 scope="col" 행 제목은 scope="row" 
+            눈에 띄는 변화는 없으나, 검색엔진에 노출되기 때문
+            정석으로는 설정해주는 것이 맞은 것!-->
+            <tr>
+                <!-- 셀 내용을 구분하는 제목은 th태그 사용 -->
+                <th scope="col"></th>
+                <th scope="col">제목 1</th>
+                <th scope="col">제목 2</th>
+                <th scope="col">제목 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>데이터 11</td>
+                <!-- colspan은 행 병합, 병합될 행의 td를 제거하지 않으면
+                오른쪽으로 밀려나서 새로운 열을 생성함. -->
+                <td colspan="2">데이터 12</td>
+            </tr>
+            <tr>                
+                <th scope="row">2</th>
+                <td>데이터 21</td>
+                <!-- rowspan은 열 병합, colspan과 마찬가지 -->
+                <td rowspan="3">데이터 22</td>
+                <td>데이터 23</td>
+            </tr>
+            <tr>                
+                <th scope="row">3</th>
+                <td>데이터 31</td>
+                <td>데이터 33</td>
+            </tr>
+            <tr>                
+                <th scope="row">4</th>
+                <td>데이터 41</td>
+                <td>데이터 43</td>
+            </tr>
+        </tbody>
+        <tfoot>            
+            <tr>                
+                <td>합계</td>
+                <td>총합 1</td>
+                <td>총합 2</td>
+                <td>총합 3</td>
+            </tr>
+        </tfoot>
+        <!-- 테이블 내용은 한층씩 쌓아내려간다고 생각하면 됨.
+        tr태그 안에 작성한 내용이 열 단위로 생성 -->
+    </table>
+</body>
+</html>

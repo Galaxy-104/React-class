@@ -1,0 +1,10 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+div{
+    display: inline-block;
+}
+/* 인라인 블록 요소는 블록 요소가 인라인 요소의 속성을 갖게 되는 것
+블록 요소처럼 margin, padding, width 등의 속성의 영향을 받음 
+컨텐츠를 정렬할 때는 인라인 요소처럼 부모 요소에 text-align을 설정 */

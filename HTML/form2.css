@@ -1,0 +1,4 @@
+textarea{
+    resize: none;
+    /* textarea의 크기를 사용자가 자율적으로 변경하지 못하게 함. */
+}

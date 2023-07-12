@@ -1,0 +1,39 @@
+.guide{
+    width: 1000px;
+    margin: auto;
+}
+.guide a{
+    letter-spacing: -3px;
+    display: block;
+    color: #909090; 
+    font-size: 54px;
+    line-height: 76px;
+    text-decoration: none;
+    font-family: 'Noto Sans CJK KR Light'
+}
+.guide a:hover{
+    color: #333;
+}
+.guide a span{
+    letter-spacing: 0;
+    font-size: 13px;
+    line-height: 100%;
+    vertical-align: text-top;
+    position: relative; top: 13px;
+}
+.guide a strong{  
+    color: #333;
+    position: relative;
+}
+.guide a strong::before{
+    position: absolute; bottom: 9.5px;
+    content: ' ';
+    background-color: #f54;
+    z-index: -1;
+    width: 0%;
+    height: 10px;
+    transition: 1s;
+}
+.guide a:hover strong::before{
+    width: 100%;
+}

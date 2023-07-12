@@ -1,0 +1,39 @@
+<!DOCTYPE html>form
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그</title>
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+    <form action="server.js" method="get"> 
+        <!-- 데이터를 서버로 전송하기 위해서는 form 태그로 묶어줘야함 -->
+        <!-- action: 사용자가 입력한 데이터를 전송 받아서 처리하는 서버 파일의 경로 -->
+        <!-- method: 사용자가 입력한 데이터를 전송하는 방식 -->
+        <p>
+            <label for="username">사용자 이름:</label>
+            <input type="text" placeholder="아이디를 입력하세요." id="username" required>
+            <!-- label for와 input의 id를 동일하게 주면
+            label을 클릭했을 때 입력창에 포커스 -->
+            <!-- required속성을 사용하면 입력창에 내용을 입력해야만 데이터를 서버로 전송
+            required는 input이 form 태그 안에 있을 때만 사용 가능 -->
+        </p>
+        <p>
+            <label for="useremail">이메일 주소:</label>
+            <input type="email" placeholder="이메일 주소를 입력하세요" id="useremail" required>
+        </p>
+        <p>
+            <label for="userpassword">사용자 비밀번호:</label>
+            <input type="password" placeholder="비밀번호를 입력하세요." id="userpassword" required>
+        </p>
+        <!-- input 태그는 인라인요소라 가로로 나열됨.
+        블록요소인 p태그를 사용하여 세로로 정렬 -->
+        <!-- p태그 대신에 ul>li 태그를 이용하고 디자인해도 ok -->
+        <p>
+            <input type="submit" value="가입하기">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+.premium{
+    text-align: center;
+}
+.benefit{
+    display: inline-block;
+    text-align: center;
+    width: 333px;
+    height: 310px;
+    line-height: 37px;
+    vertical-align: top;
+    margin-top: 25px;
+}
+.title{
+    color: #0f0f0f;
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0;
+}
+.ex{
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 7px;
+
+}
+.benefit span{
+    color: red;
+    font-size: 84px;
+    margin: 0;
+    padding: 0;
+}

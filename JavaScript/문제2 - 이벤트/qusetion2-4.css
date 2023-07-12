@@ -1,0 +1,16 @@
+body{
+    margin: 0; padding: 0;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: peru;
+    background-image: url('https://m.sajinsangsa.co.kr/data/goods/201511/26152237view.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

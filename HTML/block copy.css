@@ -1,0 +1,21 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    background-color: black;
+    padding: 10px;
+    margin: 50px;
+}
+h1{
+    background-color: tomato;
+}
+input{
+    width: 300px;
+    height: 20px;
+}
+/* span 태그는 웹페이지에서 컨텐츠 일부에 다른 스타일을 적용할 때 주로 사용 */
+span{
+    background-color: pink;
+}

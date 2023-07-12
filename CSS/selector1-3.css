@@ -1,0 +1,12 @@
+/* main .item:nth-child(3){
+  background-color: violet;
+} */
+/* nth-child()를 사용할 경우 지정한 태그의 부모요소에 속한
+모든 태그가 순서에 포함되기 때문에
+.item이 아닌 다른 태그가 함께 있는 경우
+원하는 대로 선택이 되지 않을 수 있음 */
+main .item:nth-of-type(2){
+  background-color: goldenrod;
+}
+/* nth-of-type을 사용하면 지정한 태그만 순서에 포함되기 때문에
+여러 태그가 함께 있을 경우 사용하기 좋은 태그 */

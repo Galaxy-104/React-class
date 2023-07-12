@@ -1,0 +1,459 @@
+:root{
+    --color-search-text:rgb(195, 25, 82);
+    --color-search-background:rgb(255, 253, 158);
+    --color-save-text:rgb(0, 107, 108);
+    --color-save-background:rgb(218, 255, 246);
+    --color-shop-background:rgb(255, 226, 235);
+    --color-shop-text:rgb(195, 47, 0);
+    --color-home-button-base:rgb(225, 225, 225);
+    --color-home-dinner:rgb(194, 139, 0);
+    --color-home-home:rgb(97, 140, 123);
+    --color-home-fashion:rgb(0, 118, 211);
+    --color-home-gardening:rgb(64, 122, 87);
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+p{
+    margin: 0;
+}
+button{
+    outline: none;
+    border: none;
+}
+body{
+    margin: 0; padding: 0;
+    width: 100%; height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    width: 100%; height: 100vh;
+}
+.container > section{
+    scroll-snap-align: start;
+    width: 100%; height: 100%;
+}
+
+.container .top{
+    background-color: white;
+    position: relative;
+}
+.top .top-header{
+    width: 100%; height: 80px;
+    border: 1px solid red;
+}
+.top .text-container{
+    height: calc(30% + 140px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.top .text-container .text-first{
+    font-size: 60px;
+    font-weight: bold;
+}
+.top .text-container .text-second{
+    height: 60px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-home-dinner);
+}
+.top .text-container .text-second p{
+    width: 100%;
+    font-size: 60px;
+}
+.top .text-container .text-button{
+    width: 100%;
+}
+.top .text-container .text-button ul{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.top .text-container .text-button ul li{
+    list-style-type: none;
+}
+.top .text-container .text-button ul li button{
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin: 6px;
+}
+.top .image-container{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+}
+.top .image-container img{
+    width: 236px; height: 350px;
+}
+.top .image-container section{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.top .image-container section > div{
+    border: 1px solid lightgray;
+    width: 252px; height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.top .image-container section > div > div{
+    border: 1px solid darkolivegreen;
+    width: 252px; height: 366px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: image 5s infinite;
+}
+@keyframes image{
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    10%, 90%{
+        transform: translateY(0px);
+        opacity: 1;
+        z-index: 1;
+    }
+    to{
+        transform: translateY(-40px);
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.top .top-bottom{
+    width: 100%; height: 60px;
+    background-color:  var(--color-search-background);
+    position: absolute;
+    bottom: 0;
+}
+.container .search{
+    background-color: var(--color-search-background);
+    display: flex;
+}
+.search .search-left{
+    width: 50%; height: 100%; 
+    display: flex;
+}
+.search .search-left .search-photo-container{
+    display: flex;
+    width:600px; height: 610px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+}
+.search .search-left .search-photo-container a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search .search-left .search-photo-container a div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.search .search-left .search-photo-container a .search-photo-top{
+    background-image: url(https://s.pinimg.com/webapp/topRight-d0230035.png);
+    width: 164px; height: 200px;
+    z-index: 1;
+    top: 0; right: 84px;
+}
+.search .search-left .search-photo-container a .search-photo-bottom{
+    background-image: url(https://s.pinimg.com/webapp/right-88044782.png);
+    width: 140px; height: 220px;
+    z-index: 1;
+    bottom: 24px; right: 78px;
+}
+.search .search-left .search-photo-container a .search-photo-middle{
+    background-image: url(https://s.pinimg.com/webapp/left-511a9304.png);
+    width: 200px;   height: 280px;
+    z-index: 2;
+    left: 8px;
+    margin: auto 0;
+}
+.search .search-left .search-photo-container a .search-photo-center{
+    background-image: url(https://s.pinimg.com/webapp/center-77497603.png);
+    width: 288px;   height: 440px;
+    z-index: 3;
+}
+.search .search-left .search-photo-container a .search-photo-text{
+    background-color: #fff;
+    width: 280px; height: 100px;
+    z-index: 4;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    top: 240px; left: 118px;
+}
+.search .search-left a .search-photo-text span:first-child{
+    color: #000;
+}
+.search .search-left a .search-photo-text span:last-child{
+    color: rgb(110, 15, 60);
+    font-size: 24px
+}
+.search .search-right{
+    display: flex;
+    width: 50%;
+}
+.search .search-right .search-right-text{
+    display: flex;
+    color: var(--color-search-text);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto auto;
+
+}
+.search .search-right .search-right-text h3{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+.search .search-right .search-right-text p{
+    font-size: 24px;
+    width: 418px;
+    margin: 16px;
+}
+.search .search-right .search-right-text a{
+    background-color: var(--color-search-text);
+    display: inline-block;
+    font-size: 18px;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    color: var(--color-search-background);
+}
+.container .save{
+    background-color: var(--color-save-background);
+    display: flex;
+}
+.save .save-left{
+    display: flex;
+    width: 50%;
+}
+.save .save-left .save-left-text{
+    display: flex;
+    color: var(--color-save-text);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto auto;
+}
+.save .save-left .save-left-text h3{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+.save .save-left .save-left-text p{
+    font-size: 24px;
+    width: 410px;
+    margin: 16px;
+}
+.save .save-left .save-left-text a{
+    background-color: var(--color-save-text);
+    display: inline-block;
+    font-size: 18px;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    color: var(--color-save-background);
+}
+.save .save-right{
+    display: flex;
+    width: 50%;
+}
+.save .save-right .save-right-container{
+    display: grid;
+    grid-template-areas: 
+        "  a     a     b "
+        "  a     a     c "
+        " none   d     e ";
+    margin: auto 0;
+}
+.save .save-right .save-right-container div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.save .save-right .save-right-container .save-right-a{
+    background-image: url(https://s.pinimg.com/webapp/future-home-vibes-55a673b9.png);
+    grid-area: a;
+    width: 400px; height: 420px;
+}
+.save-right .save-right-container a{
+    width: 100%; height: 100%;
+    display: flex;
+}
+.save-right .save-right-container .save-right-a a{
+    flex-direction: column;
+    font-size: 56px;
+    padding: 76px 36px 0 36px;
+}
+.save-right .save-right-container .save-right-a a .a-sub-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.save-right .save-right-container .save-right-a a .a-sub-container div{
+    width: 90px; height: 130px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.save-right .save-right-container .save-right-a a .a-sub-container 
+.a-sub:nth-child(1){
+    background-image: url(https://s.pinimg.com/webapp/future-home1-f4037b6b.png);
+}
+.save-right .save-right-container .save-right-a a .a-sub-container 
+.a-sub:nth-child(2){
+    background-image: url(https://s.pinimg.com/webapp/future-home2-c70a8738.png);
+}.save-right .save-right-container .save-right-a a .a-sub-container 
+.a-sub:nth-child(3){
+    background-image: url(https://s.pinimg.com/webapp/future-home3-ac09e50f.png);
+}
+.save .save-right .save-right-container .save-right-b{
+    background-image: url(https://s.pinimg.com/webapp/scandinavian-bedroom-917ad89c.png);
+    grid-area: b;
+    width: 223px; height: 235px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+}
+.save .save-right .save-right-container .save-right-b a{
+    font-size: 28px;
+    align-items: flex-end;
+    padding: 0 20px 24px 20px;
+}
+.save .save-right .save-right-container .save-right-c{
+    grid-area: c;
+    background-image: url(https://s.pinimg.com/webapp/deck-of-dreams-fb527bf1.png);
+    width: 165px; height: 173px;
+    margin-left: 40px;
+}
+.save .save-right .save-right-container .save-right-c a{
+    font-size: 20px;
+    align-items: flex-end;
+    padding: 0 10px 20px 10px;
+}
+.save .save-right .save-right-container .save-right-d{
+    grid-area: d;
+    background-image: url(https://s.pinimg.com/webapp/serve-my-drinks-263547ea.png);
+    width: 223px; height: 235px;
+    margin-right: 20px;
+}
+.save .save-right .save-right-container .save-right-d a{
+    font-size: 28px;
+    align-items: flex-end;
+    padding: 0 30px 30px 30px;
+}
+.save .save-right .save-right-container .save-right-e{
+    background-image: url(https://s.pinimg.com/webapp/bathroom-upgrade-48ebb8fc.png);
+    grid-area: e;
+    width: 223px; height: 235px;
+    margin-left: 20px;
+    margin-top: 60px;
+
+}
+.save .save-right .save-right-container .save-right-e a{
+    align-items: flex-end;
+    font-size: 28px;
+    padding: 0 32px 40px 20px;
+}
+.container .shop{
+    background-color: var(--color-shop-background);
+    display: flex;
+}
+
+.shop .shop-left{
+    display: flex;
+    width: 50%;
+}
+.shop-left .shop-photo-container{
+    background: url(https://s.pinimg.com/webapp/shop-bd0c8a04.png) center no-repeat;
+    background-size: cover;
+    width: 100%; height: 100%;
+}
+.shop-left .shop-photo-container a .shop-photo-inner{
+    width: 215px; height: 430px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    left: 84px;
+    top: 188px;
+}
+.shop-left .shop-photo-container a .shop-photo-inner div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.shop-left .shop-photo-container a .shop-photo-inner .shop-photo-center{
+    width: 215px; height: 383px;
+    background-image: url(https://s.pinimg.com/webapp/creator-pin-img-491ebb56.png);
+    border-radius: 14px;
+}
+.shop-left .shop-photo-container a .shop-photo-inner .shop-photo-side{
+    width: 96px; height: 96px;
+    background: url(https://s.pinimg.com/webapp/creator-avatar-d7a05622.png);
+    position: absolute;
+    background-size: contain;
+    bottom: 12px; left: -36px;
+}
+.shop-left .shop-photo-container a .shop-photo-inner p{
+    padding-left: 30px;
+}
+
+.shop .shop-right{
+    display: flex;
+    width: 50%;
+}
+.shop .shop-right .shop-right-text{
+    display: flex;
+    color: var(--color-shop-text);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto auto;
+}
+.shop .shop-right .shop-right-text h3{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    width: 410px;
+}
+.shop .shop-right .shop-right-text p{
+    font-size: 24px;
+    width: 418px;
+    margin: 16px;
+}
+.shop .shop-right .shop-right-text a{
+    background-color: var(--color-shop-text);
+    display: inline-block;
+    font-size: 18px;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    line-height: 50px;
+    color: var(--color-shop-background);
+}

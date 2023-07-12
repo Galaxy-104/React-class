@@ -1,0 +1,31 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+/* div{
+    background-color: orange;
+    width: 30%;
+    margin-left: auto;
+} */
+/*블록 레벨 요소는 크기 지정이 가능하다
+padding, margin 설정도 가능*/
+/* 블록 레벨 요소는 width가 설정이 되어있어도 한 줄을 차지하기 때문에
+줄 바꿈이 됨. */
+section{
+    background-color: aquamarine;
+    margin: 50px;
+    padding: 20px;
+}
+div{
+    background-color: orange;
+    width: 50%;
+    margin: 60px;
+}
+h1, p{
+    color: aliceblue;
+    background-color: black;
+}
+
+/* 블록요소는 블록요소와 인라인 요소를 그룹화할 수 있음.
+a 태그는 링크를 연결해 주는 태그이기 때문에
+블록 요소를 안에 넣을 수 있는 예외 */

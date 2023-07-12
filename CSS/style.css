@@ -1,0 +1,14 @@
+.parent{
+    width: 600px;
+}
+/* px은 절대 단위로 브라우저에서는 1/96인치를 1px로 인식 */
+/* 브라우저의 크기에 따라 변하지 않는 고정값이므로 반응형 웹에는 적합하지 않음 */
+.child1{
+    width: 50%;
+    background-color: aquamarine;
+}
+/* 부모요소를 기준으로 삼아 크기를 정함 */
+.child2{
+    width: 50vw;
+    background-color: yellowgreen;
+}

@@ -1,0 +1,17 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+a{
+    background-color: aquamarine;
+    width: 30%;
+    height: 500px;
+    margin: 50px 30px;
+    padding: 10px 25px;
+}
+/* 인라인 요소는 크기 지정 불가 */
+/* 인라인 요소는 텍스트로 취급하기 때문에 
+부모 요소에서 라인 정렬을 지정해줘야 효과가 나타남 */

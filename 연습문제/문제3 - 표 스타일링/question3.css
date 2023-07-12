@@ -1,0 +1,28 @@
+.user{
+    width: 20rem;
+    min-width: 9rem;
+}
+.username{
+    font-size: 1.5rem;
+}
+.userID{
+    color: #6c757d;
+    font-size: 1.0rem;
+}
+[alt="profileimg"]{
+    width: 55px;
+    height: 55px;
+    border-radius: 45px;
+    margin-right: 15px;
+    float: left;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.contact button{
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+}
+.actions .material-symbols-outlined{
+    color: #007bff;
+}

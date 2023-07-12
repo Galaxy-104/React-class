@@ -1,0 +1,22 @@
+.box{
+    width: 300px;
+    height: 200px;
+    /* width와 height은 컨텐츠의 사이즈를 조정
+    padding, border제외 */
+    padding: 10px 20px;
+    border: 30px solid red;
+    background-color: orange;
+    box-sizing: border-box;
+    /* box-sizing: border-box를 사용하면
+    border와 padding의 크기를 합한 width와 height를 설정할 수 있음 */
+  }
+  /* 
+  *{
+    box-sizing: border-box;
+  }
+  html, body{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+  } 
+  */
+  /* 웹페이지를 만들 때 기본적으로 설정해 놓는게 좋음! */

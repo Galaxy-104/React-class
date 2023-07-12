@@ -1,0 +1,18 @@
+.menu, .search, .voice, .setting{
+    background-color: #FFF;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+}
+.menu:hover, .search:hover, .voice:hover, .setting:hover{
+    background-color: aquamarine;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+}

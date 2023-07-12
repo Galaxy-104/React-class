@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Extreme&family=Roboto+Mono:wght@500&family=Ubuntu:wght@300&display=swap');
+
+/* font-family: 'Pathway Extreme', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif; */
+
+body{
+    margin: 0; padding: 0;
+    background: url(https://assets.nicepagecdn.com/d2cc3eaa/3955079/images/34.jpg) center no-repeat, rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+*{
+    color: #fff;
+}
+.container .header{
+    text-align: center;
+    position: relative;
+    transform: translateY(50px);
+}
+.header .header-text{
+    font-size: 3.5rem;
+}
+.header .ex-text{
+    font-size: 1.2rem;
+}
+.header .header-text, 
+.header .ex-text{
+    width: 41rem;
+    height: 6rem;
+    margin: 0 auto;
+    min-width: 41rem;
+}
+.header .navi{
+    display: inline-block;
+    width: 33.75rem;
+    height: 6.75rem;
+    margin-top: 1.2rem;
+}
+.header .navi span{
+    display: inline-block;
+    width: 13rem;
+    height: 3.5rem;
+    border: solid 2px #fff;
+    border-radius: 50px;
+    line-height: 3.2rem;
+    margin: 0 0.5rem;
+}
+.navi .view-menu{
+    background-color: #fff;
+}
+.navi .view-menu a{
+    color: #000;
+}
+.header .navi span a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-family: 'Ubuntu', sans-serif; 
+}
+.middle-text{
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 2.5rem;
+    font-family: 'Pathway Extreme', sans-serif;
+}
+.middle-text a{
+    text-decoration: none;
+    border-bottom: solid 1px #fff;
+}
+.images{
+    text-align: center;
+}
+.images div[class^="image"]{
+    display: inline-block;
+    width: 16.25rem;
+    height: 13.875rem;
+    margin: 0.85rem 0.85rem;
+    box-sizing: content-box;
+    position: relative;
+    background-color: #e73d0c;
+}
+.images div[class^="contents"]{
+    width: 14rem;
+    height: 8rem;
+    position: absolute;
+    top: 3.5rem;
+    left: 1rem;
+}
+.images div[class^="contents"] img{
+    width: 59px;
+    height: 59px;
+}
+.images div[class^="contents"] h6{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 0.7rem;
+}

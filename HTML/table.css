@@ -1,0 +1,8 @@
+table, th, td{
+    border: 0.5px solid slateblue;
+    border-collapse: collapse; 
+}
+/* 테이블의 테두리는 border 속성을 이용해서 변경 */
+td{
+    text-align: center;
+}

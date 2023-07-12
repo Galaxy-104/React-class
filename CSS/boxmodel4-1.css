@@ -1,0 +1,48 @@
+body{
+  margin: 0; padding: 0;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  background-color: skyblue;
+  display: table-cell;
+  vertical-align: middle;
+}
+.container nav{
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+}
+.container nav ul{
+  list-style: none;
+  padding: 0; margin: 0;
+  text-align: center;
+  font-size: 0; 
+  /* display:inline-block인 경우 디폴트 마진을 제거 */
+  margin: 1rem;
+}
+.container nav ul li{
+  display: inline-block;
+  font-size: 5rem;
+  width: 150px; height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  margin: .4rem;
+  background-color: rgba(255, 255, 255, .1);
+  box-shadow: 0 .1rem .2rem rgba(0, 0, 0, .3);
+  transition: .3s;
+}
+.container nav ul li a{
+  text-decoration: none;
+  color: gray;
+}
+.material-symbols-outlined{
+  font-size: 5rem;
+}
+.container nav ul li:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, .3);
+}
+.container nav ul li:hover .material-symbols-outlined{
+  color: white;
+}

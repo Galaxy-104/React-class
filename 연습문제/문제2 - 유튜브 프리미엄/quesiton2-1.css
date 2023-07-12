@@ -1,0 +1,84 @@
+
+.first{
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    max-width: 560px;
+}
+.content{
+    font-size: 2.0rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+}
+button{
+    color: #fff;
+    background-color: #065fd4;
+    height: 36px;
+    font-size: 14px;
+    border-radius: 100px;
+    width: 130px;
+    cursor: pointer;
+    border: none;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+button:hover{
+    background-color: #0d4b9c;
+}
+.price{
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+}
+.inform{
+    font-size: 1.0rem;
+}
+.limit{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #065fd4;
+    line-height: 6rem;
+}
+.second{
+    text-align: center;
+}
+.material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 48
+  }
+.benefit{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    max-width: 333px;
+    height: 310px;
+    line-height: 37px;
+    vertical-align: top;
+    margin-top: 25px;
+}
+.title{
+    color: #0f0f0f;
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0;
+}
+.ex{
+    color: #606060;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 7px;
+
+}
+.benefit span{
+    color: red;
+    font-size: 84px;
+    margin: 0;
+    padding: 0;
+}

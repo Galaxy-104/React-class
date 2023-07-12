@@ -1,0 +1,17 @@
+input[type="radio"][name="gender"]:checked + label{
+  background-color: yellow;
+}
+input[type="checkbox"]:checked + label{
+  background-color: red;
+}
+/* checkbox or radio 버튼을 만들었을 때,
+checked 속성을 사용하면 체크된 버튼만 다르게 디자인할 수 있음 */
+#mandatory:target{
+  background-color: orangered;
+}
+#optional:target{
+  background-color: orange;
+}
+/* 내부 링크를 설정하기 위해서는 a태그의 링크부분에 #id값을 넣어주면 됨. */
+/* 링크를 클릭했을 때 링크에 연결된 컨텐츠에 스타일을 적용할 때,
+#id:target 속성을 이용하여 스타일 설정  */

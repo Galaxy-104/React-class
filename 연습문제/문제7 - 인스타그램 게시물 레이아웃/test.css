@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    width: 50%;
+    height: 200px;
+    border: 1px solid red;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.container div{
+    flex-basis: 200px;
+    height: 200px;
+    border: 1px solid blue;
+}
+.container div span{
+    font-size: 50px;
+}

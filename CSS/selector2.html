@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        textarea {
+        resize: none;
+        }
+    </style>
+    <link rel="stylesheet" href="selector2.css">
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+
+    <h3>선택목록</h3>
+    <p>
+        <a href="#mandatory">필수사항</a>
+        <a href="#optional">옵션사항</a>
+    </p>
+
+        <form action="/" method="post">
+            <fieldset id="mandatory">
+                <legend>필수 사항</legend>
+                <table>
+                    <tr>     
+                        <td><label for="username">사용자 이름: </label></td>
+                        <td><input type="text" placeholder="아이디를 입력하세요." id="username" required></td>    
+                    </tr>
+                    <tr>
+                        <td><label for="useremail">이메일 주소: </label></td>
+                        <td><input type="email" placeholder="이메일 주소를 입력하세요." id="useremail" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="userpassword">사용자 비밀번호: </label></td>
+                        <td><input type="password" placeholder="비밀번호를 입력하세요." id="userpassword" required></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset id="optional">
+                <legend>옵션 사항</legend>
+                <p>
+                    <label for="address">주소: </label>
+                    <select name="address" id="address">
+                        <option value="seoul">서울특별시</option>
+                        <option value="busan">부산광역시</option>
+                        <option value="deagu">대구광역시</option>
+                    </select>
+                </p>
+                <p>
+                    <span>성별: </span>
+                    <input type="radio" id="male" name="gender" value="남성">
+                    <label for="male">남성</label>
+                    <input type="radio" id="female" name="gender" value="여성">
+                    <label for="female">여성</label>
+                </p>  
+                <p>
+                    <span>관심사: </span>
+                    <input type="checkbox" id="html" name="html" value="HTML">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css" name="css" value="CSS">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="javascript" name="javascript" value="JAVASCRIPT">
+                    <label for="javascript">JAVASCRIPT</label>
+                </p>
+                <p>
+                    <label for="message">인사말</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </p>
+                <p>
+                    <label for="profile">프로필 사진</label>
+                    <input type="file" id="profile" name="profile" accept="image/png, image/jpeg">
+                </p>
+                <p>
+                  <label for="website">웹사이트: </label>
+                  <input type="url" id="website" name="website">
+                </p>
+                <p>
+                  <label for="birth">생년월일: </label>
+                  <input type="date" id="birth" name="birth">
+                </p>
+                <p>
+                  <label for="fruit-choice">좋아하는 과일: </label>
+                  <input id="fruit-choice" name="fruit-choice" list="fruit-flavors">
+                  <datalist id="fruit-flavors">
+                    <option value="apple">
+                    <option value="banana">
+                    <option value="orange">
+                    <option value="mango">
+                    <option value="watermelon">
+                  </datalist>
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="가입하기">
+            </p>
+        </form>
+</body>
+</html>

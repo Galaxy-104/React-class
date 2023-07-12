@@ -1,0 +1,100 @@
+header{
+    background-color: orange;
+  }
+  #logo{
+    font-size: 3rem;
+  }
+  .item{
+    background-color: brown;
+  }
+  .half-width{
+    width: 50%;
+  }
+  .highlight-color{
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  main section p{
+    background-color: blue;
+  }
+  main > p{
+    background-color: skyblue;
+  }
+  header nav > ul > li > a{
+    background-color: olive;
+  }
+  main > article h1 + article{
+    width: 10%;
+    border-radius: 50%;
+  }
+  main > article h1 + article ~ article{
+    border-radius: 0 20% 0 0;
+    /* border-radius는 좌측 상단 모서리를 기준으로 시계방향 순서 */
+    height: 30vh;
+  }
+  header, main, footer{
+    background-color: gray;
+  }
+  [target]{
+    text-decoration: none;
+  }
+  /* [target="_blank"]{
+    background-color: orange;
+  } */
+  [class^=side]{
+    font-size: 5rem;
+  }
+  header > a:hover{
+    color: orange;
+  }
+  :link{ /* 아직 방문하지 않은 링크 */
+    text-decoration: none;
+    color: brown;
+  }
+  :visited{ /* 방문한 링크 */
+    color: yellowgreen;
+  }
+  a:focus{
+    background-color: blue;
+    color: aliceblue;
+  }
+  a:active{
+    background-color: black;
+    color: red;
+  }
+  address:focus-within{
+    background-color: blueviolet;
+  }
+input,button{
+  outline: none; 
+  /* 포커스 기능 제거 */
+}
+input:focus, button:focus{
+  background-color: red;
+/* 포커스 스타일 커스터마이징 */
+}
+address p:first-child, address p:last-child{
+  background-color: orange;
+}
+aside nav ul li:nth-child(odd){ /* 홀수 번째 요소 선택 */
+  /* 2n+1, odd 동일한 결과 */
+  background-color: orangered;
+}
+aside nav ul li:nth-child(even){
+  background-color: blanchedalmond;
+  /* 짝수 번째 요소 선택
+  2n, even 동일한 결과 */
+}
+aside h3::before{
+  content: ':)';
+  font-size: 5rem;
+  color: blueviolet;
+}
+aside h3::after{
+  content: ':b';
+  font-size: 7rem;
+  color: palevioletred;
+}
+/* ::before, ::after는 인라인 요소이므로 너비와 높이 설정 불가
+display:block or inline-block으로 변경해야 설정 가능 */

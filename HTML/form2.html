@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 태그</title>
+    <link rel="stylesheet" href="/연습/HTML/form2.css">
+</head>
+<body>
+    <h1>회원가입 페이지</h1>
+    <form action="#" method="post"> 
+        <fieldset>
+            <legend>필수 사항</legend>
+            <table>
+                <tr>
+                    <td><label for="username">사용자 이름: </label></td>
+                    <td><input type="text" placeholder="아이디를 입력하세요." id="username" required></td>
+                </tr>
+                <tr>
+                    <td><label for="useremail">이메일 주소: </label></td>
+                    <td><input type="email" placeholder="이메일 주소를 입력하세요" id="useremail" required></td>
+                </tr>
+                <tr>
+                    <td><label for="userpassword">사용자 비밀번호: </label></td>
+                    <td><input type="password" placeholder="비밀번호를 입력하세요." id="userpassword" required></td>
+                </tr>
+            </table>
+            <!-- 폼 내용을 가로로 정렬하고 싶을 때 table 태그를 이용할 수 있음. -->
+        </fieldset>
+        <fieldset>
+            <legend>옵션 사항</legend>
+            <p>
+                <label for="address">주소: </label>
+                <select name="address" id="address">
+                    <option value="seoul">서울특별시</option>
+                    <option value="daejeon">대전광역시</option>
+                    <option value="busan">부산광역시</option>
+                    <!-- 브라우저에서 서버로 데이터 전송할 때, name 값이 데이터아이디로 전송됨
+                    서버에서 name 값을 조회했을 때, 사용자가 선택한 value를 조회할 수 있음 -->
+                </select>
+            </p>
+            <p>
+                <span>성별: </span>
+                <label for="male">남성</label>
+                <input type="radio" id="male" name="gender" value="남성">
+                <label for="female">여성</label>
+                <input type="radio" id="female" name="gender" value="여성">
+                <!-- name 값을 설정하지 않고 radio 버튼을 만들면 모든 버튼에 선택이 됨.
+                여러 중에 하나로 선택할 경우 동일한 name 값을 주면 ok -->
+            </p>
+            <p>
+                <span>관심사: </span>
+                <label for="html">HTML</label>
+                <input type="checkbox" id="html" name="html" value="HTML">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="css" name="css" value="CSS">
+                <label for="javascript">JAVASCRIPT</label>
+                <input type="checkbox" id="javascript" name="javescript" value="JAVASCRIPT">
+                <!-- checkbox는 다중 선택이 가능한 버튼이기 때문에 동일한 name값을 설정하면
+                서버에서 여러 개의 value 값 중에 사용자가 선택한 값을 분별하기 어려움.
+                따라서 checkbox는 선택사항별로 name을 다르게 해줘야 함. -->
+            </p>
+            <p>
+                <label for="message">인사말</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <!-- 영문자 기준으로 글자수 제한 -->
+                <!-- textarea에 blank가 생기면 커서가 중간에서 시작 -->
+                <!-- 사용자가 textarea의 크기를 조정할 수 있는 것이 디폴트 -->
+            </p>
+            <p>
+                <label for="profile">프로필 사진</label>
+                <input type="file" id="profile" name="profile" accept="image/png, image/jpeg">
+                <!-- accept를 설정하면 지정한 파일만 추려서 보여줌 -->
+            </p>
+        </fieldset>
+        <p><input type="submit" value="가입하기"></p>
+    </form>
+</body>
+</html>
