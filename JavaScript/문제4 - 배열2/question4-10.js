@@ -33,35 +33,11 @@ fetch(API_URL)
     return res.json()
 })
 .then(function(products){
-
-    function arrayPrice(){
-        const check = header.querySelector('.active')
-        if(check === null){
-            root.innerHTML = ""
-            copyProductsRefined.sort(function(a, b){
-            return a.price - b.price
-            })
-            copyProductsRefined.forEach(displayProduct)
-            priceBtn.classList.add('active')    
-        }else{
-            root.innerHTML = ""
-            productsRefined.forEach(displayProduct)
-            priceBtn.classList.remove('active')
-        }
-    }
-
-    // 상품 정보에 대한 배열로부터 웹화면에 보여줄 DOM 객체로 이루어진 배열로 변환하기
-    const productsRefined = products.map(buildElement)
-    const copyProductsRefined =[...productsRefined]
-
-    // DOM 객체로 이루어진 배열을 사용하여 웹 화면에 상품 정보 보여주기
-    productsRefined.forEach(displayProduct)
-
-    const items = root.querySelectorAll('.product')
-
+    
+    
     function searchItems(e){
         console.log(e.target.value)
-        
+        const items = root.querySelectorAll('.product')
         function showItems(item){
             if(item.innerHTML.includes(e.target.value) === true){
                 item.style.display = 'block'
@@ -71,7 +47,61 @@ fetch(API_URL)
         }
 
         items.forEach(showItems)
+
+
+        
     }
+
+    function arrayPrice(){
+        const check = header.querySelector('.active')
+        const items = root.querySelectorAll('.product')
+        
+        if(check === null){
+            copyProductsRefined.sort(function(a, b){
+            return a.price - b.price
+            })
+            let itemIndex = 0
+            function addOrders(item){
+                let index = productsRefined.indexOf(item)
+                items[index].style.order = String(itemIndex)
+                itemIndex++
+            }
+            copyProductsRefined.forEach(addOrders)
+            priceBtn.classList.add('active')    
+        }else{
+            function removeOrders(item){
+                item.style.order = '0'
+            }
+            items.forEach(removeOrders)
+            priceBtn.classList.remove('active')
+        }
+    }
+
+
+    // function arrayPrice(){
+    //     const check = header.querySelector('.active')
+    //     if(check === null){
+    //         root.innerHTML = ""
+    //         copyProductsRefined.sort(function(a, b){
+    //         return a.price - b.price
+    //         })
+    //         copyProductsRefined.forEach(displayProduct)
+    //         priceBtn.classList.add('active')    
+    //     }else{
+    //         root.innerHTML = ""
+    //         productsRefined.forEach(displayProduct)
+    //         priceBtn.classList.remove('active')
+    //     }
+        
+    // }
+
+    // 상품 정보에 대한 배열로부터 웹화면에 보여줄 DOM 객체로 이루어진 배열로 변환하기
+    const productsRefined = products.map(buildElement)
+    const copyProductsRefined =[...productsRefined]
+
+    // DOM 객체로 이루어진 배열을 사용하여 웹 화면에 상품 정보 보여주기
+    productsRefined.forEach(displayProduct)
+    
 
     search.addEventListener('input', searchItems)
     
