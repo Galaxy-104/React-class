@@ -1,5 +1,9 @@
-
-
+nav .navbar .container-fluid, nav .collapse .row.mx-md-5{
+    max-width: 1320px;
+}
+nav .collapse .row.mx-md-5 .col-4.py-4 a{
+    color: #fff;
+}
 main .container .card img{
     width: 100%;
     height: 225px;
