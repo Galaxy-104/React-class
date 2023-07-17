@@ -1,0 +1,43 @@
+.Modal {
+    width: 500px;
+    margin: 100px auto;
+    border: 1px solid tan;
+    padding: 10px;
+    text-align: center;
+
+    &.open{
+        display: block;
+    }
+
+    &.close{
+        display: none;
+    }
+
+    & > div{
+        padding: 5px;
+    }
+
+    .header{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .body{
+        font-size: 0.9rem;
+        margin: 20px;
+        & input{
+            width: 60%;
+            height: 30px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+

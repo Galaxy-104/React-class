@@ -1,0 +1,27 @@
+.puma-icon {
+  background: url("./images/puma.jpg") center no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+
+.sea-slug-icon {
+  background: url("./images/sea-slug.jpg") center no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+
+.egret-icon {
+  background: url("./images/egret.jpg") center no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}
+
+.salamander-icon {
+  background: url("./images/salamander.jpg") center no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+}/*# sourceMappingURL=style.css.map */

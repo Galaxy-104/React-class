@@ -1,0 +1,16 @@
+// List
+
+@each $animal in puma, sea-slug, egret, salamander{
+    .#{$animal}-icon{
+        background: url('./images/#{$animal}.jpg') center no-repeat;
+        background-size: contain;
+        width: 200px; height: 200px;
+    }
+}
+
+// map
+@each $key in $value in (h1: 2rem, h2: 1.5rem, h3: 1rem){
+    #{$key}{
+        font-size: $value;
+    }
+}

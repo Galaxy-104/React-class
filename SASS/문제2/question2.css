@@ -1,0 +1,36 @@
+.Modal {
+  width: 500px;
+  margin: 100px auto;
+  border: 1px solid tan;
+  padding: 10px;
+  text-align: center;
+}
+.Modal.open {
+  display: block;
+}
+.Modal.close {
+  display: none;
+}
+.Modal > div {
+  padding: 5px;
+}
+.Modal .header {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.Modal .body {
+  font-size: 0.9rem;
+  margin: 20px;
+}
+.Modal .body input {
+  width: 60%;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.Modal .footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}/*# sourceMappingURL=question2.css.map */

@@ -1,0 +1,56 @@
+.Button {
+  all: unset;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.Button:hover {
+  opacity: 0.7;
+}
+.Button.large {
+  height: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1.2rem;
+}
+.Button.medium {
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1rem;
+}
+.Button.small {
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 0.8rem;
+}
+.Button.blue {
+  background: blue;
+}
+.Button.blue:hover {
+  background: skyblue;
+}
+.Button.tomato {
+  background: tomato;
+}
+.Button.tomato:hover {
+  background: lightsalmon;
+}
+.Button.grey {
+  background: grey;
+}
+.Button.grey:hover {
+  background: lightgrey;
+}
+.Button.fullWidth {
+  width: 100%;
+  margin-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=question1.css.map */
