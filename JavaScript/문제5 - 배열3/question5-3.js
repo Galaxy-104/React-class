@@ -68,7 +68,22 @@ for(let i = 0; i < alphabet.length; i++){
     classified[alphabet[i]] = alphabetFrequency[i]
 }
 
-console.log(classified)
+
+
+const newArray = {}
+
+function reArray(array){
+    newArray[array[0]] = array[1]
+}
+
+const sortable = Object.entries(classified)
+    .sort(([, a], [, b]) => b - a)
+    
+
+sortable.forEach(reArray)
+
+console.log(sortable)
+console.log(newArray)
 
 // 구현하기
 
