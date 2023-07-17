@@ -72,18 +72,20 @@ for(let i = 0; i < alphabet.length; i++){
 
 const newArray = {}
 
-function reArray(array){
-    newArray[array[0]] = array[1]
-}
-
 const sortable = Object.entries(classified)
     .sort(([, a], [, b]) => b - a)
-    
+
+function reArray(array){
+    newArray[array[0]] = array[1]
+}    
 
 sortable.forEach(reArray)
 
-console.log(sortable)
 console.log(newArray)
+// 객체는 순서가 없기 때문에 원하는 대로 정렬하기 어려울 수 있음.
 
 // 구현하기
+for(let alphabet in newArray){
+    console.log(`${alphabet} : ${newArray[alphabet]}`)
+}
 
