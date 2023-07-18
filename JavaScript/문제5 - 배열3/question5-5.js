@@ -33,9 +33,17 @@ function initInput(){
 function addComment(){
     const comment = commentInput.value
     
+    function filtering(word){
+        function findInsults(insult){
+            return word.includes(insult) === true
+        }
+        if(insults.some(findInsults) === true) return `😊`
+        else return word
+    }
+
     if(comment !== ''){
-        const check = comment.split(' ').map()
-        comments.push(comment)
+        const check = comment.split(' ').map(filtering).join(' ')
+        comments.push(check)
         initInput()
         displayComments(comments)
     }else{
