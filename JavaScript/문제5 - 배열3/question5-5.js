@@ -32,9 +32,9 @@ function initInput(){
 // 댓글 추가하기
 function addComment(){
     const comment = commentInput.value
-
+    
     if(comment !== ''){
-        
+        const check = comment.split(' ').map()
         comments.push(comment)
         initInput()
         displayComments(comments)

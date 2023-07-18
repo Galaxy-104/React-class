@@ -1,27 +1,71 @@
-.puma-icon {
-  background: url("./images/puma.jpg") center no-repeat;
-  background-size: contain;
-  width: 200px;
-  height: 200px;
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.sea-slug-icon {
-  background: url("./images/sea-slug.jpg") center no-repeat;
-  background-size: contain;
-  width: 200px;
-  height: 200px;
+.background .harry-potter {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: red;
 }
-
-.egret-icon {
-  background: url("./images/egret.jpg") center no-repeat;
-  background-size: contain;
-  width: 200px;
-  height: 200px;
+.background .harry-potter::after {
+  content: "harry-potter";
+  color: white;
+  font-size: 20px;
 }
-
-.salamander-icon {
-  background: url("./images/salamander.jpg") center no-repeat;
-  background-size: contain;
+.background .spiderman {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: red;
+}
+.background .spiderman::after {
+  content: "spiderman";
+  color: white;
+  font-size: 20px;
+}
+.background .ironman {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: red;
+}
+.background .ironman::after {
+  content: "ironman";
+  color: white;
+  font-size: 20px;
+}
+.background .Harry {
   width: 200px;
   height: 200px;
+  margin: 10px;
+  background-color: blue;
+}
+.background .Harry::after {
+  content: "Harry";
+  color: white;
+  font-size: 20px;
+}
+.background .Spider {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: blue;
+}
+.background .Spider::after {
+  content: "Spider";
+  color: white;
+  font-size: 20px;
+}
+.background .Iron {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: blue;
+}
+.background .Iron::after {
+  content: "Iron";
+  color: white;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */

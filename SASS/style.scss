@@ -1,16 +1,46 @@
-// List
+@use "sass:map";
 
-@each $animal in puma, sea-slug, egret, salamander{
-    .#{$animal}-icon{
-        background: url('./images/#{$animal}.jpg') center no-repeat;
-        background-size: contain;
-        width: 200px; height: 200px;
-    }
-}
+$books:(
+    harry-potter: "Harry",
+    spiderman: "Spider",
+    ironman: "Iron"
+);
 
-// map
-@each $key in $value in (h1: 2rem, h2: 1.5rem, h3: 1rem){
-    #{$key}{
-        font-size: $value;
+$default-width: 50px;
+$default-height: 50px;
+$default-margin: 10px;
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @each $key in map.keys($books){
+        .#{$key}{
+            width: $default-width * 2;
+            height: $default-height * 2;
+            margin: $default-margin;
+            background-color: red;
+        }
+        .#{$key}::after{
+            content: "#{$key}";
+            color:white;
+            font-size: 20px;
+        }
     }
+
+    @each $value in map.values($books) {
+        .#{$value}{
+            width: $default-width * 4;
+            height: $default-height * 4;
+            margin: $default-margin;
+            background-color: blue;
+        }
+        .#{$value}::after{
+            content: "#{$value}";
+            color: white;
+            font-size: 20px;
+        }
+    }
+
 }

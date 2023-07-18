@@ -1,0 +1,157 @@
+@use "sass:map";
+
+$root: (
+    primary-color: #e73d0c,
+    text-color: #fff,
+    text-offset: 500px
+);
+
+@mixin positionCenter(){
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin buttonStyle($bg, $ts, $bs) {
+    background: $bg;
+    color: $ts;
+    border: $bs;
+}
+
+@mixin fadein($name, $ftX, $ttX) {
+    animation: $name 1.5s;
+    @keyframes #{$name} {
+        from{
+            opacity: 0;
+            transform: scale(0);
+            transform: translateX($ftX);
+        }
+        to{
+            opacity: 1;
+            transform: scale(1);
+            transform: translateX($ttX);
+        }
+    }
+}
+
+body{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(https://assets.nicepagecdn.com/d2cc3eaa/3955079/images/34.jpg);
+    background-size: cover;
+    background-position: center center;
+    overflow: auto;
+
+    .text-center{
+        text-align: center;
+      }
+
+    .container{
+        @include positionCenter();
+        width: 100%; min-width: 500px;
+        color: map.get($root, text-color);
+        max-height: 100%;
+        overflow: auto;
+
+        .title{
+            h1{
+                font-size: 3rem;
+                text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+                margin: 60px auto 0;
+                @include fadein(fadein-to-right, calc(-1 * map.get($root, text-offset)), 0)
+            }
+
+            P{
+                font-size: 1.25rem;
+                max-width: 760px; width: 60%;
+                display: inline-block;
+                @include fadein(fadein-to-left, map.get($root, text-offset), 0)
+            }
+        }
+
+        .actions{
+            margin-top: 2rem;
+
+            button{
+                text-transform: uppercase;
+                cursor: pointer;
+                font-weight: 700;
+                border-radius: 20px;
+                padding: 14px 40px 15px;
+                margin: .5rem;
+                letter-spacing: .1rem;
+                display: inline-block;
+
+                &:nth-child(1){
+                    @include buttonStyle(map.get($root, text-color), #333, none);
+                    animation: fadein-to-right 1.5s;
+
+                    &:hover{
+                        @include buttonStyle(map.get($root, primary-color), map.get($root, text-color), none)
+                    }
+                }
+
+                &:nth-child(2){
+                    @include buttonStyle(transparent, map.get($root, text-color), 2px solid map.get($root, text-color));
+                    animation: fadein-to-left 1.5s;
+
+                    &:hover{
+                        @include buttonStyle(map.get($root, primary-color), map.get($root, text-color), 2px solid map.get($root, primary-color))
+                    }
+                }
+            }
+        }
+
+        p{
+            font-weight: 700;
+            margin-bottom: 3rem;
+            animation: fade-to-top 1.5s;
+
+            
+            a{
+                color: map.get($root, text-color);
+            }
+
+        }
+
+        .foods {
+            figure{
+                display: inline-block;
+                background-color: map.get($root, primary-color);
+                padding: 60px 50px; margin: 1rem;
+                min-width: 150px;
+                line-height: 2rem;
+                font-weight: bold;
+                letter-spacing: .2rem;
+                animation: fade-to-top 1.5s;
+
+                img{
+                    width: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade-to-top {
+    from{
+        opacity: 0;
+        height: 0;
+        min-width: 0px;
+        transform: scale(0);
+        transform: translateY(map.get($root, text-offset));
+    }
+    to{
+        opacity: 1;
+        height: 100%;
+        min-width: 150px;
+        transform: scale(1);
+        transform: translateY(0);
+    }
+}
