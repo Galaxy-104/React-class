@@ -1,29 +1,20 @@
-// 사용자 정보 조회
-function loadUser(url){ 
-    return fetch(url)
-    .then(response => response.json())
+const modalWindow = document.querySelector(".modal-window")
+const container = document.querySelector('.container')
+const openButton = document.querySelector('.background > button')
+const closeButton = modalWindow.querySelector('button')
+
+
+function openModal(){
+    container.classList.add('show')
+    document.body.style.overflow = 'hidden'
+    document.body.style.padding = '0 17px 0 0'
 }
 
-// 깃허브 아바타 사진 조회
-function loadGithubUser(name){
-    return fetch(`https://api.github.com/users/${name}`)
-    .then(response => response.json())
+function closeModal(){
+    container.classList.remove('show')
+    document.body.style.overflow = 'auto'
+    document.body.style.padding = '0'
 }
 
-function showAvatar(githubUser){
-    return new Promise(function(resolve, reject){
-        let img = document.createElement('img')
-        img.src = githubUser.avatar_url
-        document.body.append(img)
-    
-        setTimeout(() => {
-            img.remove()
-            resolve(githubUser)
-        }, 3000)
-    })
-}
-
-loadUser('js/user.json')
-.then(user => loadGithubUser(user.name))
-.then(githubUser => showAvatar(githubUser))
-.then(githubUser => alert('작업이 끝났습니다.'))
+openButton.addEventListener('click', openModal)
+closeButton.addEventListener('click', closeModal)

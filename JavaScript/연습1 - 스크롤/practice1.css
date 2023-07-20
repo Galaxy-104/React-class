@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 300vh;
+  width: 100%;
+  background-color: #000;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+.background {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.background .characters .character {
+  width: 200px;
+  height: 300px;
+  position: fixed;
+}
+.background .characters .character.fire {
+  background: url(fire.png) no-repeat;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+}
+.background .characters .character.water {
+  background: url(water.png) no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+}
+
+button {
+  position: fixed;
+  z-index: 2;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  transition: 0.3s;
+}
+.container .modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .modal-container .hands {
+  width: 100px;
+  height: 200px;
+}
+.container .modal-container .hands.right-hand {
+  background: url(right-hand.png) no-repeat;
+  background-size: contain;
+  order: 3;
+}
+.container .modal-container .hands.left-hand {
+  background: url(left-hand.png) no-repeat;
+  background-size: contain;
+}
+.container .modal-container .modal-window {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 500px;
+  height: 300px;
+  border-radius: 0.5rem;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  color: #fff;
+  font-size: 5rem;
+  border: 1.5px solid rgba(41, 18, 78, 0.7);
+  box-shadow: 0 0 5rem rgba(41, 18, 78, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .modal-container .modal-window .card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .modal-container .modal-window .card .movie-img {
+  background: url(https://file2.nocutnews.co.kr/newsroom/image/2023/04/20/202304201050574752_0.jpg) center no-repeat;
+  background-size: cover;
+  width: 230px;
+  height: 280px;
+}
+.container .modal-container .modal-window button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.album {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 656px;
+  height: 369px;
+  overflow: hidden;
+  border: 1.5px solid rgba(41, 18, 78, 0.7);
+  box-shadow: 0 0 5rem rgba(41, 18, 78, 0.7);
+}
+.album .img-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.album .img-container .imgs:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/1B55C3B9F0C909060F0B741A708E0A48E1289C43A6E73FEC938B81D90EC029F4/scale?width=1200&aspectRatio=1.78&format=jpeg") center no-repeat;
+  background-size: cover;
+}
+.album .img-container .imgs:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  background: url("https://variety.com/wp-content/uploads/2023/01/ELEMENTAL_ONLINE-USE-m328_152_pub.pub16.222.jpg") center no-repeat;
+  background-size: cover;
+}
+.album .img-container .imgs:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  background: url("https://cdn.vox-cdn.com/thumbor/Q3PwyxEsfoU_iP6CuWlQF4_hICI=/0x94:2400x1351/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/24730228/elementalcover.jpg") center no-repeat;
+  background-size: cover;
+}
+.album .img-container .imgs:nth-child(4) {
+  width: 100%;
+  height: 100%;
+  background: url("https://media.cnn.com/api/v1/images/stellar/prod/230504105401-01-elementals-pixar.jpg?c=original") center no-repeat;
+  background-size: cover;
+}
+.album .img-container .imgs:nth-child(5) {
+  width: 100%;
+  height: 100%;
+  background: url("https://compote.slate.com/images/a7f8f399-8eb1-4965-97e5-7012f0f45097.jpeg?crop=1560%2C1040%2Cx0%2Cy0") center no-repeat;
+  background-size: cover;
+}
+.album .img-container .imgs:nth-child(6) {
+  width: 100%;
+  height: 100%;
+  background: url("https://novouae.gumlet.io/Files//Movie/997x498/elemental1440-new.jpg?w=480&dpr=2.6") center no-repeat;
+  background-size: cover;
+}
+
+.show {
+  display: block;
+  z-index: 3;
+}/*# sourceMappingURL=practice1.css.map */
