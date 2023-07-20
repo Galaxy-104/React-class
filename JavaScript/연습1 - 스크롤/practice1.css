@@ -18,6 +18,9 @@ body::-webkit-scrollbar {
   height: 100%;
   box-sizing: border-box;
 }
+.background button {
+  left: 80px;
+}
 .background .characters .character {
   width: 200px;
   height: 300px;
@@ -27,13 +30,13 @@ body::-webkit-scrollbar {
   background: url(fire.png) no-repeat;
   background-size: cover;
   bottom: 0;
-  left: 0;
+  left: 80px;
 }
 .background .characters .character.water {
   background: url(water.png) no-repeat;
   background-size: cover;
   top: 0;
-  right: 0;
+  right: 80px;
 }
 
 button {
@@ -66,8 +69,8 @@ button {
   align-items: center;
 }
 .container .modal-container .hands {
-  width: 100px;
-  height: 200px;
+  width: 180px;
+  height: 360px;
 }
 .container .modal-container .hands.right-hand {
   background: url(right-hand.png) no-repeat;
@@ -80,8 +83,8 @@ button {
 }
 .container .modal-container .modal-window {
   background-color: rgba(0, 0, 0, 0.3);
-  width: 500px;
-  height: 300px;
+  width: 900px;
+  height: 540px;
   border-radius: 0.5rem;
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
@@ -115,8 +118,8 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 656px;
-  height: 369px;
+  width: 1168px;
+  height: 657px;
   overflow: hidden;
   border: 1.5px solid rgba(41, 18, 78, 0.7);
   box-shadow: 0 0 5rem rgba(41, 18, 78, 0.7);
@@ -164,6 +167,52 @@ button {
   background-size: cover;
 }
 
+@media (max-width: 1584px) {
+  .album {
+    width: 912px;
+    height: 513px;
+  }
+  .background > button {
+    left: 40px;
+  }
+  .background .characters .character.fire {
+    left: 40px;
+  }
+  .background .characters .character.water {
+    right: 40px;
+  }
+  .container .modal-container .hands {
+    width: 140px;
+    height: 280px;
+  }
+  .container .modal-container .modal-window {
+    width: 700px;
+    height: 420px;
+  }
+}
+@media (max-width: 1226px) {
+  .album {
+    width: 656px;
+    height: 369px;
+  }
+  .background > button {
+    left: 0px;
+  }
+  .background .characters .character.fire {
+    left: 0px;
+  }
+  .background .characters .character.water {
+    right: 0px;
+  }
+  .container .modal-container .hands {
+    width: 100px;
+    height: 200px;
+  }
+  .container .modal-container .modal-window {
+    width: 500px;
+    height: 300px;
+  }
+}
 .show {
   display: block;
   z-index: 3;
