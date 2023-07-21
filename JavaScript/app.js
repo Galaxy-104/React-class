@@ -1,49 +1,32 @@
-function Book(name, price, release, authors){
-    this.name = name
-    this.price = price
-    this.release = release
-    this.authors = authors
+const container = document.querySelector('.container')
+let isDown = false // 플래그 : 현재 마우스 클릭 여부 판단
+let startX // 마우스 클릭시 마우스의 X 좌표
+let scrollLeft // 최근 스크롤바 위치 저장
+
+container.addEventListener('mousedown', e => {
+    isDown = true
+    container.classList.add('active')
+    // 컨테이너 기준 현재 마우스의 x좌표 저장
+    startX = e.pageX - container.offsetLeft
+    // 현재 스크롤바 위치 저장
+    scrollLeft = container.scrollLeft
+})
+
+function deactive(){
+    isDown = false
+    container.classList.remove('active')
 }
 
-Book.prototype = {
-    getInfo(){
-        console.log('----- 책 정보 -----')
-        console.log('제목: ', this.name)
-        console.log('가격: ', this.price)
-        console.log('초판: ', this.release)
-        console.log('저자: ', this.authors.join(' '))
-    },
-    discount(){
-        if(this.name === 'python'){
-            this.price -= 1000
-        }
-    },
-    get getPrice(){
-        return this.price
-    },
-    set addAuthor(newAuthor){
-        this.authors.push(newAuthor)
-    }
-}
+container.addEventListener('mouseleave', deactive)
+container.addEventListener('mouseup', deactive)
 
-const book1 = new Book(
-    'javascript',
-    21000,
-    '2019-12-03',
-    ['mark', 'victoria']
-)
-const book2 = new Book(
-    'python',
-    18700,
-    '2022-01-07',
-    ['syleemomo']
-)
-
-
-book1.discount()
-book1.addAuthor = 'sunrise'
-console.log(book1.name, book1.getPrice)
-console.log(book1.authors)
-
-book2.discount()
-console.log(book2.name, book2.getPrice)
+container.addEventListener('mousemove', e =>{
+    if(!isDown) return
+    e.preventDefault()
+    // 마우스가 드래그 될 때 마우스의 x 좌표
+    const x = e.pageX - container.offsetLeft
+    // 마우스 클릭 지점에서 드래그 한 거리
+    const walk = x - startX
+    // 최근 스크롤바 위치에서 마우스 이동 거리만큼 더하거나 빼야함
+    container.scrollLeft = scrollLeft - walk
+})

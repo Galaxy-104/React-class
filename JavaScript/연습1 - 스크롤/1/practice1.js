@@ -22,7 +22,8 @@ function closeModal(){
 function scrollImgs(){
     let windowScroll = document.documentElement.scrollTop
     let imgsTop = windowScroll
-    if(imgsTop > 1845){
+    let bodyWidth = document.documentElement.clientWidth
+    if(bodywidth <imgsTop > 1845){
         imgsTop = 1845
     } 
     imgContainer.style.top = `-${imgsTop}px`
@@ -31,3 +32,5 @@ function scrollImgs(){
 openButton.addEventListener('click', openModal)
 closeButton.addEventListener('click', closeModal)
 window.addEventListener('scroll', scrollImgs)
+
+
