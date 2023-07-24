@@ -8,7 +8,7 @@ body{
 
     nav{
         position: fixed;
-        width: 100%; height: 70px;
+        width: 100%; height: 5rem;
         border: 1px solid red;
     }
 
@@ -19,7 +19,7 @@ body{
         display: none;
 
         .modal-window{
-            width: 500px; height: 500px;
+            width: 30rem; height: 30rem;
             border: 1px solid yellow;
             position: absolute;
             top: 50%; left: 50%;
@@ -28,23 +28,39 @@ body{
     }
 
     main{
-        padding-top: 70px;
+        padding-top: 5rem;
 
         .item-container{
             display: flex;
-            width: 70%; height: 450px;
+            width: 70vw; height: 28rem;
             overflow-x: auto;
             margin: 100px auto;
 
             .item{
                 border: 1px solid blue;
-                width: 300px; height: 420px;
+                width: 18rem; height: 26.5rem;
                 flex: 1 0 auto;
-                margin-right: 20px;
-                line-height: 420px;
+                margin-right: 1.25rem;
+                line-height: 26.5rem;
                 text-align: center;
                 font-size: 3rem;
+                position: relative;
                 cursor: pointer;
+
+                .bookmark{
+                    background-color: #fff;
+                    border: 1px solid red;
+                    border-radius: 50%;
+                    width: 2.5rem; height: 2.5rem;
+                    position: absolute;
+                    bottom: .5rem;
+                    right: .5rem;
+                    cursor: pointer;
+                    
+                    &:hover{
+
+                    }
+                }
             }
         }
     }

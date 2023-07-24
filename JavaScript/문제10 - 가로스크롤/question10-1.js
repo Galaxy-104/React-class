@@ -1,6 +1,9 @@
 // 포켓몬 API
 // https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0
+// 화장품 API
+// http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline
 
+const API_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline'
 const main = document.querySelector('main')
 const itemContainer = main.querySelector('.item-container')
 const modalContainer = document.querySelector('.modal-container')
@@ -15,21 +18,28 @@ let isDown = false
 let scrollLeft
 let isClicked = false
 
+fetch(API_URL)
+.then(response => response.json())
+.then(products => console.log(products))
 
+//  아이템 div 생성
 let j = 65
 for(let i = 0; i < 20; i++){
     
     const div = document.createElement('div')
     div.className = 'item'
-    div.innerText = `${String.fromCharCode(j)}`
+    div.innerHTML = `<button class="bookmark">
+    <span class="material-symbols-rounded">
+    star
+    </span>
+    </button>`
     j++
-
     itemContainer.appendChild(div)
 }
 
 
 
-
+// 드래그앤드롭
 itemContainer.addEventListener('mousedown', e => {
     isDown = true
     isClicked = true
@@ -56,17 +66,21 @@ itemContainer.addEventListener('mousemove', e => {
 })
 
 itemContainer.addEventListener('click', (e) => {
-    
     if(isClicked && e.target.className === 'item'){
-        const div = document.createElement('div')
-        console.log(e.target)
-        selectedItems.appendChild(e.target)
-        div.className = 'item'
-        div.innerText = `${String.fromCharCode(61)}`
-        itemContainer.appendChild(div)
+        
     }
+    
+})    
+//     if(isClicked && e.target.className === 'item'){
+//         const div = document.createElement('div')
+//         console.log(e.target)
+//         selectedItems.appendChild(e.target)
+//         div.className = 'item'
+//         div.innerText = `${String.fromCharCode(61)}`
+//         itemContainer.appendChild(div)
+//     }
 
-})
+
 
 openBtn.addEventListener('click', () => {
     modalContainer.style.display = 'block'
@@ -76,11 +90,3 @@ closeBtn.addEventListener('click', () => {
 })
 
 
-// function selectItem(e){
-//     isClicked = true 
-//     if(isClicked && e.target.className === 'item'){
-//         console.log(e.target)
-//     }
-// }
-
-// itemContainer.addEventListener('click', selectItem)
