@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Krub:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Nunito:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+:root {
+  --primary-color: rgb(232, 224, 255);
+  --secondary-color: rgb(187, 131, 243);
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--primary-color);
 }
 
 .background {
@@ -13,6 +20,7 @@ body {
   width: 100%;
   height: 5rem;
   border: 1px solid red;
+  background-color: #fff;
 }
 .background .modal-container {
   position: fixed;
@@ -39,6 +47,9 @@ body {
   height: 28rem;
   overflow-x: auto;
   margin: 100px auto;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 .background main .item-container .item {
   border: 1px solid blue;
@@ -46,15 +57,39 @@ body {
   height: 26.5rem;
   flex: 1 0 auto;
   margin-right: 1.25rem;
-  line-height: 26.5rem;
-  text-align: center;
   font-size: 3rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
+}
+.background main .item-container .item .item-img {
+  text-align: center;
+  width: 100%;
+  height: 50%;
+}
+.background main .item-container .item .item-info {
+  width: 100%;
+  height: 50%;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.background main .item-container .item .item-info span {
+  word-break: normal;
+}
+.background main .item-container .item .item-info span:first-child, .background main .item-container .item .item-info span .bold, .background main .item-container .item .item-info span.rating {
+  font-weight: bold;
+}
+.background main .item-container .item .item-info span.rating {
+  display: flex;
+  align-items: center;
 }
 .background main .item-container .item .bookmark {
   background-color: #fff;
-  border: 1px solid red;
+  border: 1px solid var(--secondary-color);
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
