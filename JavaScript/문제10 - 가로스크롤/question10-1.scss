@@ -15,7 +15,6 @@
 body{
     margin: 0; padding: 0;
     box-sizing: border-box;
-    background-color: var(--primary-color);
 }
 
 .background{
@@ -54,6 +53,7 @@ body{
             background: #fff;
             padding: 1rem;
             border-radius: .5rem;
+            border: 1px solid var(--secondary-color);
 
             .item{
                 border: 1px solid blue;
@@ -69,15 +69,40 @@ body{
 
                 .item-img{
                     text-align: center;
-                    width: 100%;
                     height: 50%;
+                    background-color: #fff;
+                    padding: 1rem;
+
+                    img{
+                        width: 11rem;
+                        height: 11rem;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                    
                     
                 }
 
+                .item-colors{
+
+                    width: 80%;
+                    height: 3rem;
+                    display: flex;
+                    padding: .2rem .5rem;
+                    flex-wrap: wrap;
+
+                        .color{
+                            margin: .2rem;
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            border-radius: 50%;
+                        }
+
+                    }
+
                 .item-info{
-                    width: 100%;
                     height: 50%;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     padding: .8rem;
                     display: flex;
                     flex-direction: column;
@@ -85,6 +110,10 @@ body{
                     
                     span{
                         word-break: normal;
+
+                        &:first-child{
+                            font-size: 1.1rem;
+                        }
 
                         &:first-child, & .bold, &.rating{
                             font-weight: bold;
@@ -108,6 +137,19 @@ body{
                     right: .5rem;
                     cursor: pointer;
                     
+                }
+            }
+        }
+
+        .item-page{
+            section{
+                display: none;
+
+                .details{
+                    
+                    display: flex;
+                    
+
                 }
             }
         }

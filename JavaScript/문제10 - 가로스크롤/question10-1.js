@@ -7,8 +7,8 @@ const API_URL = 'http://makeup-api.herokuapp.com/api/v1/products.json?brand=mayb
 const main = document.querySelector('main')
 const itemContainer = main.querySelector('.item-container')
 const modalContainer = document.querySelector('.modal-container')
-const items = itemContainer.querySelectorAll('.item')
 const selectedItems = modalContainer.querySelector('.selected-items')
+const itemPage = main.querySelector('.item-page')
 
 const usersBookmarkBtn = document.querySelector('.buttons .users-bookmark')
 const closeBtn = modalContainer.querySelector('button')
@@ -50,14 +50,17 @@ fetch(API_URL)
         // 제품 이름에 브랜드 이름 제거
         let productName = products[pickRandomIndex[i]].name.split(' ').splice(1).join(' ')
 
-        // 랜덤 인덱스의 정보를 가지고 와서 div 만들기
+        // 랜덤 인덱스의 정보를 가지고 와서 item div 만들기
         const div = document.createElement('div')
         div.className = 'item'
+        div.dataset.id = `${i}`
         div.innerHTML = `
         <div class="item-img">
             <img src="${products[pickRandomIndex[i]].image_link}" alt="">
-            <div class="item-colors"></div>
         </div>
+
+        <div class="item-colors"></div>
+
         <div class="item-info">
             <span>${productName}</span>
             <span>
@@ -83,11 +86,65 @@ fetch(API_URL)
         itemContainer.appendChild(div)
 
         // 제품의 색상 정보 만들기
-
+        const createItems = main.querySelectorAll('.item')
+        const itemColor = createItems[i].querySelector('.item-colors')
         let productColors = products[pickRandomIndex[i]].product_colors
-        console.log(productColors)
-        
-        
+
+        if(productColors.length !== 0){
+            for(let i = 0; i < productColors.length; i++){
+                const colorDiv = document.createElement('div')
+                colorDiv.className = 'color'
+                colorDiv.style.background = `${productColors[i].hex_value}`
+
+                itemColor.appendChild(colorDiv)
+            }
+        }
+
+        // 아이템 상세페이지 만들기
+        const itemSection = document.createElement('section')
+        itemSection.innerHTML = `
+        <div class="details">
+            <div class = "item-img">
+                <img src="${products[pickRandomIndex[i]].image_link}">
+            </div>
+            <div class="item-informs">
+                <h3>${productName}</h3>
+                <p>
+                    <span>Price </span>
+                    ${products[pickRandomIndex[i]].price}
+                </p>
+                <p>
+                    <span>Type </span>
+                    ${products[pickRandomIndex[i]].product_type}
+                </p>
+                <p>
+                    <span class="material-symbols-rounded">
+                        star
+                    </span>
+                    ${(products[pickRandomIndex[i]].rating)}
+                </p>
+            </div>
+        </div>
+        <div class="item-description">
+            <p>${products[pickRandomIndex[i]].description}</p>
+        </div>
+        `
+        itemPage.appendChild(itemSection)
+
+        const sections = main.querySelectorAll('.item-page > section')
+        const itemInforms = sections[i].querySelector('.details > .item-informs')
+
+        if(productColors.length !== 0){
+            for(let i = 0; i < productColors.length; i++){
+                const colorDiv = document.createElement('div')
+                colorDiv.className = 'color'
+                colorDiv.style.background = `${productColors[i].hex_value}`
+                colorDiv.style.color = '#fff'
+                colorDiv.innerHTML = `${productColors[i].colour_name}`
+
+                itemInforms.appendChild(colorDiv)
+            }
+        }
 
     }
 
@@ -123,12 +180,24 @@ itemContainer.addEventListener('mousemove', e => {
     isClicked = false
 })
 
+// 아이템을 클릭했을 때 상세페이지가 나타나도록
 itemContainer.addEventListener('click', (e) => {
-    if(isClicked && e.target.className === 'item'){
-        
+
+    const sections = main.querySelectorAll('.item-page > section')
+    if(isClicked && e.target.className !== 'bookmark' 
+    && e.target.parentNode.className !== 'bookmark' 
+    && e.target.className !== 'item-container'){
+        let index = e.target.closest('.item').dataset.id
+        sections.forEach((section) => {
+            section.style.display = 'none'
+            
+        })
+        sections[index].style.display = 'block'
     }
     
-})    
+})
+
+
 //     if(isClicked && e.target.className === 'item'){
 //         const div = document.createElement('div')
 //         console.log(e.target)
