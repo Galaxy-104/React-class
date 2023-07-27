@@ -152,7 +152,7 @@ body{
                 display: none;
                 border: 1px solid red;
                 width: 70vw;
-                margin: 0 auto;
+                margin: 2rem auto;
                 padding: 0 2rem;
 
                 // 아이템 사진 & 정보
@@ -190,7 +190,8 @@ body{
         // 모든 아이템 정보
         .card-container{
             width: 70vw;
-            margin: 0 auto;
+            margin: 1rem auto;
+            padding-top: 1rem;
             display: flex;
             flex-wrap: wrap;
             background: #fff;
