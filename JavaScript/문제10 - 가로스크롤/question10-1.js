@@ -9,6 +9,7 @@ const itemContainer = main.querySelector('.item-container')
 const modalContainer = document.querySelector('.modal-container')
 const selectedItems = modalContainer.querySelector('.selected-items')
 const itemPage = main.querySelector('.item-page')
+const footer = document.querySelector('footer')
 
 const usersBookmarkBtn = document.querySelector('.buttons .users-bookmark')
 const closeBtn = modalContainer.querySelector('button')
@@ -150,6 +151,8 @@ fetch(API_URL)
 
     const cardContainer = main.querySelector('.card-container')
     
+
+    // 8개씩 로딩하는 무한스크롤 만들기
     let offset = 0
     function createEightItems(offset){
         for(let i = offset; i < offset + 8 && i < products.length; i++){
@@ -223,8 +226,18 @@ fetch(API_URL)
         if(Math.abs(window.pageYOffset + document.documentElement.clientHeight - scrollHeight) < 100){
             console.log('@@')
             offset = offset + 8
+            if(offset > products.length){
+                offset = products.length
+            }
             createEightItems(offset)
         }
+
+        // sns버튼 구현하기
+        const snsBtns = document.querySelector('.sns-btns')
+        
+        
+        console.log(footer.getBoundingClientRect().top)
+        console.log(snsBtns.getBoundingClientRect().top)
 
     })
 

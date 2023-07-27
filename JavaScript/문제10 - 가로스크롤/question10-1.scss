@@ -281,4 +281,121 @@ body{
             }
         }
     }
+
+    footer{
+        width: 100vw;
+        border: 1px solid orange;
+
+        .icons{
+            padding: 3rem 0;
+            display: flex;
+
+            .scroll-up{
+                margin-left: auto;
+                margin-right: 2rem;
+                cursor: pointer;
+
+                i{
+                    width: 3rem;
+                    height: 3rem;
+                    line-height: 3rem;
+                    text-align: center;
+                    font-size: 2rem;
+                    transition: .2s;
+                }
+            }
+
+            a{
+                width: 3rem;
+                height: 3rem;
+                line-height: 3rem;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 1.5rem;
+                margin: 0 .2rem;
+                transition: .2s linear;
+            }
+        }
+
+        .credit{
+            font-size: 1rem;
+            width: 100%;
+            padding-bottom: 1rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i{
+                width: 1.5rem;
+                height: 1.5rem;
+                font-size: 1.5rem;
+                margin: .5rem;
+            }
+        }
+    }
+
+    .sns-btns{
+        border: 1px solid yellow;
+        width: 5rem;
+        position: fixed;
+        padding-bottom: 1rem;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+
+
+        .btns-open{
+            cursor: pointer;
+            transition: 1s;
+
+            .material-symbols-rounded{
+                font-size: 3.5rem;
+            }
+        }
+
+        .icons{
+            display: none;
+            transition: 1s;
+
+            a{
+                font-size: 3.1rem;
+                text-decoration: none;
+                margin-bottom: .5rem;
+            }
+
+        }
+
+        &.active{
+
+            .btns-open{
+                transform: rotate(45deg);
+            }
+
+            .icons{
+                display: block;
+            }
+
+        }
+
+    }
+
+    .page-up{
+        border: 1px solid yellow;
+        width: 5rem;
+        height: 5rem;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .material-symbols-rounded{
+            font-size: 3.5rem;
+        }
+    }
 }
