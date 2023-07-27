@@ -20,6 +20,7 @@ body {
   height: 5rem;
   border: 1px solid red;
   background-color: #fff;
+  z-index: 2;
 }
 .background .modal-container {
   position: fixed;
@@ -124,7 +125,26 @@ body {
 }
 .background main .item-page section {
   display: none;
+  border: 1px solid red;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 .background main .item-page section .details {
   display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+.background main .item-page section .details > div {
+  width: 50%;
+  height: 100%;
+  flex: 1 1 auto;
+  padding: 1rem 0;
+}
+.background main .item-page section .details .item-img {
+  text-align: center;
+}
+.background main .item-page section .details .item-img img {
+  width: 70%;
+  height: 70%;
 }/*# sourceMappingURL=question10-1.css.map */

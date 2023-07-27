@@ -20,13 +20,16 @@ body{
 .background{
     width: 100%; height: 100%;
 
+    // 내비게이션 바
     nav{
         position: fixed;
         width: 100%; height: 5rem;
         border: 1px solid red;
         background-color: #fff;
+        z-index: 2;
     }
 
+    // 좋아요 버튼 모달창
     .modal-container{
         position: fixed;
         width: 100%; height: 100%;
@@ -45,6 +48,7 @@ body{
     main{
         padding-top: 5rem;
 
+        // 상단 가로스크롤 아이템
         .item-container{
             display: flex;
             width: 70vw; height: 28rem;
@@ -141,16 +145,45 @@ body{
             }
         }
 
+        // 상세페이지
         .item-page{
+
             section{
                 display: none;
+                border: 1px solid red;
+                width: 70vw;
+                margin: 0 auto;
+                padding: 0 2rem;
 
+                // 아이템 사진 & 정보
                 .details{
-                    
                     display: flex;
+                    align-items: center;
+                    border-bottom: 1px solid #333;
                     
+                    & > div{
+                        width: 50%;
+                        height: 100%;
+                        flex: 1 1 auto;
+                        padding: 1rem 0;
+                    }
+
+                    .item-img{
+                        text-align: center;
+                        img{
+                            width: 70%;
+                            height: 70%;
+                        }
+
+                    }
 
                 }
+
+                // 아이템 묘사
+                .item-description{
+                    
+                }
+
             }
         }
     }

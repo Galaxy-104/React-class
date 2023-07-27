@@ -197,18 +197,6 @@ itemContainer.addEventListener('click', (e) => {
     
 })
 
-
-//     if(isClicked && e.target.className === 'item'){
-//         const div = document.createElement('div')
-//         console.log(e.target)
-//         selectedItems.appendChild(e.target)
-//         div.className = 'item'
-//         div.innerText = `${String.fromCharCode(61)}`
-//         itemContainer.appendChild(div)
-//     }
-
-
-
 usersBookmarkBtn.addEventListener('click', () => {
     modalContainer.style.display = 'block'
     modalContainer.style.zIndex = '3'
