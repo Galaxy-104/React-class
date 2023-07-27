@@ -186,5 +186,98 @@ body{
 
             }
         }
+
+        // 모든 아이템 정보
+        .card-container{
+            width: 70vw;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            background: #fff;
+
+            .card-item{
+                border: 1px solid blue;
+                width: 18rem; height: 26.5rem;
+                margin: 1rem;
+                font-size: 3rem;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                
+                cursor: pointer;
+
+                .item-img{
+                    text-align: center;
+                    height: 50%;
+                    background-color: #fff;
+                    padding: 1rem;
+
+                    img{
+                        width: 11rem;
+                        height: 11rem;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                    
+                    
+                }
+
+                .item-colors{
+
+                    width: 80%;
+                    height: 3rem;
+                    display: flex;
+                    padding: .2rem .5rem;
+                    flex-wrap: wrap;
+
+                        .item-color{
+                            margin: .2rem;
+                            width: 1.2rem;
+                            height: 1.2rem;
+                            border-radius: 50%;
+                        }
+
+                    }
+
+                .item-info{
+                    height: 50%;
+                    font-size: 1rem;
+                    padding: .8rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    
+                    span{
+                        word-break: normal;
+
+                        &:first-child{
+                            font-size: 1.1rem;
+                        }
+
+                        &:first-child, & .bold, &.rating{
+                            font-weight: bold;
+                        }
+
+                        &.rating{
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                    
+                }
+
+                .bookmark{
+                    background-color: #fff;
+                    border: 1px solid var(--secondary-color);
+                    border-radius: 50%;
+                    width: 2.5rem; height: 2.5rem;
+                    position: absolute;
+                    bottom: .5rem;
+                    right: .5rem;
+                    cursor: pointer;
+                    
+                }
+            }
+        }
     }
 }

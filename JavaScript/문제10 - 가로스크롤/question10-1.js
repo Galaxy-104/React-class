@@ -23,7 +23,7 @@ fetch(API_URL)
 .then(response => response.json())
 .then(function(products){
 
-    //  아이템 div 생성
+    //  상단 가로스크롤 아이템 div 생성
 
     // 10개의 랜덤 인덱스 생성
     function pickIndex(len){
@@ -147,6 +147,69 @@ fetch(API_URL)
         }
 
     }
+
+    const cardContainer = main.querySelector('.card-container')
+    
+    products.forEach((product, index) => {
+        
+        // 제품 평점이 없는 경우
+        if(product.rating === null){
+            product.rating = ' '
+        }
+
+        // 제품 이름에 브랜드 이름 제거
+        let productName = product.name.split(' ').splice(1).join(' ')
+
+        const cardDiv = document.createElement('div')
+        cardDiv.className = 'card-item'
+        cardDiv.innerHTML = `
+        <div class="item-img">
+            <img src="${product.image_link}" alt="">
+        </div>
+
+        <div class="item-colors"></div>
+
+        <div class="item-info">
+            <span>${productName}</span>
+            <span>
+                <span class="bold">Price </span>
+                ${product.price}
+            </span>
+            <span>
+                <span class="bold">Type </span>
+                ${product.product_type}
+            </span>
+            <span class="rating">
+                <span class="material-symbols-rounded">
+                    star
+                </span>
+                ${(product.rating)}
+            </span>
+        </div>
+        <button class="bookmark">
+            <span class="material-symbols-rounded">
+                thumb_up
+            </span>
+        </button>`
+        cardContainer.appendChild(cardDiv)
+
+        // 제품의 색상 정보 만들기
+        const cardItems = main.querySelectorAll('.card-item')
+        const carditemColor = cardItems[index].querySelector('.item-colors')
+        let productColors = product.product_colors
+
+        if(productColors.length !== 0){
+            for(let i = 0; i < productColors.length; i++){
+                const colorDiv = document.createElement('div')
+                colorDiv.className = 'item-color'
+                colorDiv.style.background = `${productColors[i].hex_value}`
+
+                carditemColor.appendChild(colorDiv)
+            }
+        }
+    })
+    
+
 
 })
 

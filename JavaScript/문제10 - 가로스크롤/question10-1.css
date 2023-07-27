@@ -147,4 +147,81 @@ body {
 .background main .item-page section .details .item-img img {
   width: 70%;
   height: 70%;
+}
+.background main .card-container {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.background main .card-container .card-item {
+  border: 1px solid blue;
+  width: 18rem;
+  height: 26.5rem;
+  margin: 1rem;
+  font-size: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.background main .card-container .card-item .item-img {
+  text-align: center;
+  height: 50%;
+  background-color: #fff;
+  padding: 1rem;
+}
+.background main .card-container .card-item .item-img img {
+  width: 11rem;
+  height: 11rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.background main .card-container .card-item .item-colors {
+  width: 80%;
+  height: 3rem;
+  display: flex;
+  padding: 0.2rem 0.5rem;
+  flex-wrap: wrap;
+}
+.background main .card-container .card-item .item-colors .item-color {
+  margin: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+.background main .card-container .card-item .item-info {
+  height: 50%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.background main .card-container .card-item .item-info span {
+  word-break: normal;
+}
+.background main .card-container .card-item .item-info span:first-child {
+  font-size: 1.1rem;
+}
+.background main .card-container .card-item .item-info span:first-child, .background main .card-container .card-item .item-info span .bold, .background main .card-container .card-item .item-info span.rating {
+  font-weight: bold;
+}
+.background main .card-container .card-item .item-info span.rating {
+  display: flex;
+  align-items: center;
+}
+.background main .card-container .card-item .bookmark {
+  background-color: #fff;
+  border: 1px solid var(--secondary-color);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
 }/*# sourceMappingURL=question10-1.css.map */
