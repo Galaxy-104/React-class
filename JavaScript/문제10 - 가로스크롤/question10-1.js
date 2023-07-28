@@ -24,6 +24,7 @@ fetch(API_URL)
 .then(response => response.json())
 .then(function(products){
 
+
     //  상단 가로스크롤 아이템 div 생성
 
     // 10개의 랜덤 인덱스 생성
@@ -215,7 +216,14 @@ fetch(API_URL)
         }
     }
     createEightItems(offset)
-    
+
+    const snsBtns = document.querySelector('.sns-btns')
+    const snsOpenBtn = snsBtns.querySelector('button')
+    const snsIcons = snsBtns.querySelector('.icons')
+    const pageUp = document.querySelector('.page-up')
+    const pageupBtn = pageUp.querySelector('.page-up button')
+    const cards = cardContainer.querySelectorAll('.card-item')
+
     window.addEventListener('scroll', (event) => {
         const scrollHeight = Math.max(   // 전체문서 높이 (스크롤이벤트 내부에 있어야 함)
         document.body.scrollHeight, document.documentElement.scrollHeight,
@@ -231,16 +239,87 @@ fetch(API_URL)
             }
             createEightItems(offset)
         }
-
-        // sns버튼 구현하기
-        const snsBtns = document.querySelector('.sns-btns')
+    
         
+        // 상단스크롤 버튼 & sns버튼 효과
         
-        console.log(footer.getBoundingClientRect().top)
-        console.log(snsBtns.getBoundingClientRect().top)
-
+    
+        if(cards.length === products.length && footer.getBoundingClientRect().top < document.documentElement.clientHeight){
+            snsBtns.style.display = 'none'
+            pageUp.style.display = 'none'
+            
+        }else if(window.pageYOffset < 100){
+            snsBtns.style.display = 'none'
+            pageUp.style.display = 'none'
+            
+        }else{
+            snsBtns.style.display = 'flex'
+            pageUp.style.display = 'flex'
+          
+        }
+        
     })
 
+    snsOpenBtn.addEventListener('click', (e) => {
+        if(snsOpenBtn.className !== 'active'){
+            snsOpenBtn.classList.add('active')
+            snsIcons.classList.add('active')
+        }else{
+            snsOpenBtn.classList.remove('active')
+            snsIcons.classList.remove('active')
+        }
+    })
+    pageupBtn.addEventListener('click', () => {
+        window.scrollTo({top:0, behavior:"smooth"})
+    })
+
+    const searchInput = document.querySelector('nav .search-container input')
+    const searchBtn = document.querySelector('nav .search-container button')
+
+    // searchBtn.addEventListener('click', () => {
+    //     const cardSection = main.querySelector('.card-container')
+    //     cardSection.innerHTML = ` `
+    //     products.forEach((product) => {
+    //         let productName = product.name.split(' ').splice(1).join(' ')
+
+    //         const cardDiv = document.createElement('div')
+    //         cardDiv.className = 'card-item'
+    //         cardDiv.innerHTML = `
+    //         <div class="item-img">
+    //             <img src="${product.image_link}" alt="">
+    //         </div>
+
+    //         <div class="item-colors"></div>
+
+    //         <div class="item-info">
+    //             <span>${productName}</span>
+    //             <span>
+    //                 <span class="bold">Price </span>
+    //                 ${product.price}
+    //             </span>
+    //             <span>
+    //                 <span class="bold">Type </span>
+    //                 ${product.product_type}
+    //             </span>
+    //             <span class="rating">
+    //                 <span class="material-symbols-rounded">
+    //                     star
+    //                 </span>
+    //                 ${(product.rating)}
+    //             </span>
+    //         </div>
+    //         <button class="bookmark">
+    //             <span class="material-symbols-rounded">
+    //                 thumb_up
+    //             </span>
+    //         </button>`
+    //         if(product.name.includes(`${searchInput.value}`) || product.price.includes(`${searchInput.value}`) ||
+    //         product.product_type.includes(`${searchInput.value}`) || product.rating.includes(`${searchInput.value}`)){
+    //             cardSection.appendChild(cardDiv)
+    //         }
+    //     })
+    // })
+    
 })
 
 
@@ -290,6 +369,7 @@ itemContainer.addEventListener('click', (e) => {
     
 })
 
+// 
 usersBookmarkBtn.addEventListener('click', () => {
     modalContainer.style.display = 'block'
     modalContainer.style.zIndex = '3'

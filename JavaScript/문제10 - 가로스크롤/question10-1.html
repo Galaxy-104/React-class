@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />    <link rel="stylesheet" href="question10-1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />    
+    <link rel="stylesheet" href="question10-1.css">
 </head>
 <body>
     
@@ -14,6 +15,18 @@
 
         <!-- 내비게이션 바 -->
         <nav>
+
+            <!-- 검색창 -->
+            <div class="search-container">
+                <input type="text" class="keyword" placeholder="검색어를 입력하세요.">
+
+                <button class="search">
+                    <span class="material-symbols-rounded">
+                        search
+                    </span>
+                </button>
+            </div>
+
             <div class="buttons">
                 <button type="button" class="user">
                     <span class="material-symbols-rounded">
@@ -57,11 +70,12 @@
 
         <!-- SNS 버튼 -->
         <div class="sns-btns">
-            <div class="btns-open">
+          
+            <button>
                 <span class="material-symbols-rounded">
                     add_circle
                 </span>
-            </div>
+            </button>
             <div class="icons">
                 <a href="https://ko-kr.facebook.com/" class="fab fa-facebook-f"></a>
                 <a href="https://twitter.com/?lang=ko" class="fab fa-twitter"></a>
@@ -73,9 +87,11 @@
         
         <!-- 상단 이동 버튼 -->
         <div class="page-up">
-            <span class="material-symbols-rounded">
-                arrow_circle_up
-            </span>
+            <button>
+                <span class="material-symbols-rounded">
+                    arrow_circle_up
+                </span>
+            </button>
         </div>
 
         <!-- 푸터 -->

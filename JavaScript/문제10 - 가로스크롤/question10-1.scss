@@ -15,6 +15,7 @@
 body{
     margin: 0; padding: 0;
     box-sizing: border-box;
+
 }
 
 .background{
@@ -27,7 +28,9 @@ body{
         border: 1px solid red;
         background-color: #fff;
         z-index: 2;
+        display: flex;
     }
+    
 
     // 좋아요 버튼 모달창
     .modal-container{
@@ -342,23 +345,40 @@ body{
         padding-bottom: 1rem;
         left: 0;
         bottom: 0;
-        display: flex;
+        display: none;
         flex-direction: column-reverse;
         text-align: center;
 
 
-        .btns-open{
-            cursor: pointer;
-            transition: 1s;
 
+
+        button{
+            margin: 0 auto;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            background-color: #fff;
+            transition: .5s;
+            
             .material-symbols-rounded{
                 font-size: 3.5rem;
+                
             }
+
+            &.active{
+                transform: rotate(45deg);
+            }
+
         }
+            
 
         .icons{
             display: none;
-            transition: 1s;
 
             a{
                 font-size: 3.1rem;
@@ -366,15 +386,7 @@ body{
                 margin-bottom: .5rem;
             }
 
-        }
-
-        &.active{
-
-            .btns-open{
-                transform: rotate(45deg);
-            }
-
-            .icons{
+            &.active{
                 display: block;
             }
 
@@ -390,12 +402,28 @@ body{
         right: 0;
         bottom: 0;
         
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
 
-        .material-symbols-rounded{
-            font-size: 3.5rem;
+        button{
+            margin: 0 auto;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: none;
+            background-color: #fff;
+            transition: .5s;
+            
+            .material-symbols-rounded{
+                font-size: 3.5rem;
+                
+            }
         }
+
     }
 }

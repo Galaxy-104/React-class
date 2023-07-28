@@ -21,6 +21,7 @@ body {
   border: 1px solid red;
   background-color: #fff;
   z-index: 2;
+  display: flex;
 }
 .background .modal-container {
   position: fixed;
@@ -279,30 +280,38 @@ body {
   padding-bottom: 1rem;
   left: 0;
   bottom: 0;
-  display: flex;
+  display: none;
   flex-direction: column-reverse;
   text-align: center;
 }
-.background .sns-btns .btns-open {
+.background .sns-btns button {
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition: 1s;
+  border: none;
+  background-color: #fff;
+  transition: 0.5s;
 }
-.background .sns-btns .btns-open .material-symbols-rounded {
+.background .sns-btns button .material-symbols-rounded {
   font-size: 3.5rem;
+}
+.background .sns-btns button.active {
+  transform: rotate(45deg);
 }
 .background .sns-btns .icons {
   display: none;
-  transition: 1s;
 }
 .background .sns-btns .icons a {
   font-size: 3.1rem;
   text-decoration: none;
   margin-bottom: 0.5rem;
 }
-.background .sns-btns.active .btns-open {
-  transform: rotate(45deg);
-}
-.background .sns-btns.active .icons {
+.background .sns-btns .icons.active {
   display: block;
 }
 .background .page-up {
@@ -312,10 +321,23 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
-.background .page-up .material-symbols-rounded {
+.background .page-up button {
+  margin: 0 auto;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  transition: 0.5s;
+}
+.background .page-up button .material-symbols-rounded {
   font-size: 3.5rem;
 }/*# sourceMappingURL=question10-1.css.map */
