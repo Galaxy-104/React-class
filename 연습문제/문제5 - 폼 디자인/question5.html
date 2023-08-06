@@ -7,7 +7,7 @@
     <title>연습문제5 - 폼 디자인</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="/연습/연습문제/question5.css">
+    <link rel="stylesheet" href="question5.css">
 </head>
 <body>
     <div class="container">
@@ -18,7 +18,9 @@
                 </a>
             </h1>
         </header>
+
         <h1>Register</h1>
+
         <form action="#" method="get">
             <label for="first-name" class="user-name">
                 <span class="label-text">First name</span>
@@ -38,22 +40,25 @@
             <label for="password">
                 <span class="label-text">password</span>
                 <input type="password" id="password" required>
-                <button><span class="material-symbols-outlined">
-                    visibility_off
-                </span></button>
+                <button type="button">
+                    <span class="material-symbols-outlined">
+                        visibility_off
+                    </span>
+                </button>
             </label>
 
-            <p>
-                <label for="newsletter">
-                    <input type="checkbox" id="newsletter">
-                    <span class="material-symbols-rounded">
-                        check_box_outline_blank
-                    </span>
-                    <span class="newsletter">Sign me up for the weekly newsletter.</span>
-                </label>
-            </p>
+            <label for="newsletter">
+                <input type="checkbox" id="newsletter">
+                <span class="material-symbols-rounded">
+                    check_box_outline_blank
+                </span>
+                <span class="newsletter">Sign me up for the weekly newsletter.</span>
+            </label>
+
+            <div class="submit"><input type="submit" value="Sign Me Up"></div>
         </form>
-        <p class="submit"><input type="submit" value="Sign Me Up"></p>
+
+        
     </div>
 </body>
 </html>
