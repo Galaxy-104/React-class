@@ -21,26 +21,33 @@ body{
     position: relative;
     transform: translateY(50px);
 }
-.header .header-text{
+.container .header .header-text{
     font-size: 3.5rem;
 }
-.header .ex-text{
+.container .header .ex-text{
     font-size: 1.2rem;
 }
-.header .header-text, 
-.header .ex-text{
+.container .header .header-text, 
+.container .header .ex-text{
     width: 41rem;
     height: 6rem;
     margin: 0 auto;
     min-width: 41rem;
 }
-.header .navi{
+.container .header .navi{
     display: inline-block;
     width: 33.75rem;
     height: 6.75rem;
     margin-top: 1.2rem;
 }
-.header .navi span{
+.container .header .navi a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-family: 'Pathway Extreme', sans-serif;
+}
+.container .header .navi a span{
     display: inline-block;
     width: 13rem;
     height: 3.5rem;
@@ -49,33 +56,31 @@ body{
     line-height: 3.2rem;
     margin: 0 0.5rem;
 }
-.navi .view-menu{
-    background-color: #fff;
+.container .header .navi a span:hover{
+    background-color: #e73d0c;
+    color: #fff;
+    border-color: #e73d0c;
 }
-.navi .view-menu a{
+.container .header .navi a .view-menu{
+    background-color: #fff;
     color: #000;
 }
-.header .navi span a{
-    text-decoration: none;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    font-family: 'Ubuntu', sans-serif; 
-}
-.middle-text{
+
+.container .middle-text{
     text-align: center;
     font-size: 1.25rem;
     margin: 2.5rem;
     font-family: 'Pathway Extreme', sans-serif;
 }
-.middle-text a{
+.container .middle-text a{
     text-decoration: none;
     border-bottom: solid 1px #fff;
 }
-.images{
+
+.container .images{
     text-align: center;
 }
-.images div[class^="image"]{
+.container .images > div{
     display: inline-block;
     width: 16.25rem;
     height: 13.875rem;
@@ -84,18 +89,18 @@ body{
     position: relative;
     background-color: #e73d0c;
 }
-.images div[class^="contents"]{
+.container .images div div{
     width: 14rem;
     height: 8rem;
     position: absolute;
     top: 3.5rem;
     left: 1rem;
 }
-.images div[class^="contents"] img{
+.container .images div div img{
     width: 59px;
     height: 59px;
 }
-.images div[class^="contents"] h6{
+.container .images div div h6{
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 5px;
