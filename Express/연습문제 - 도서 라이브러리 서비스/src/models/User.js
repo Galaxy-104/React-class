@@ -11,6 +11,7 @@ const userSchema = new Schema({
     },
     contact: {
         type: String,
+        require: true,
         trim: true,
     },
     isBorrowing: {
@@ -28,7 +29,7 @@ const userSchema = new Schema({
         type: Date,
     },
     overdueAt: {
-        type: Date,
+        type: String,
     },
     joinedAt: {
         type: String,

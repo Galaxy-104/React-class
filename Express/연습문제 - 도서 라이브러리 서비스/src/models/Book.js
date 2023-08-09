@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 const { Types: { ObjectId } } = Schema 
-const moment = require('moment')
 
 const bookSchema = new Schema({
     title: {
@@ -11,10 +10,12 @@ const bookSchema = new Schema({
     },
     author: {
         type: String,
+        require: true,
         trim: true,
     },
     category: {
         type: String,
+        require: true,
         trim: true,
     },
     isBorrowing: {
