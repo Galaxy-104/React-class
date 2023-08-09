@@ -3,12 +3,13 @@ const app = express()
 const logger = require('morgan')
 const axios = require('axios')
 const mongoose = require('mongoose')
-const usersRouter = require('./src/routes/users')
-const booksRouter = require('./src/routes/books')
+const usersRouter = require('./연습문제 - 도서 라이브러리 서비스/src/routes/users')
+const booksRouter = require('./연습문제 - 도서 라이브러리 서비스/src/routes/books')
+const config = require('./config')
+console.log(config)
 
-
-const CONNECT_URL = 'mongodb://127.0.0.1:27017/Jeee'
-mongoose.connect(CONNECT_URL)
+// mongodb 연결하기
+mongoose.connect(config.MONGODB_URL)
 .then(() => console.log('mongodb connected...'))
 .catch(e => console.log(`failed to connect mongodb: ${e}`))
 

@@ -9,10 +9,28 @@ const userSchema = new Schema({
         require: true,
         trim: true,
     },
+    userId: {
+        type: String,
+        require: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        require: true,
+    },
+    email: {
+        type: String,
+        require: true,
+        unique: true,
+    },
     contact: {
         type: String,
         require: true,
         trim: true,
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false,
     },
     isBorrowing: {
         type: Boolean,
