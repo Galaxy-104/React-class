@@ -1,0 +1,32 @@
+{
+"code": 200,
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ0N2I1YTAzMmIwMmNjMmExMjMxYjUiLCJuYW1lIjoi64KY64KYIiwicGFzc3dvcmQiOiJuYW5hbmFubmExMTIyIiwiY29udGFjdCI6IjAxMC0zMjQ1LTI0MzEiLCJlbWFpbCI6Im5hbmFAZ21haWwuY29tIiwiam9pbmVkQXQiOiIyMDIzLTA4LTEwIiwiaWF0IjoxNjkxNjQ4NjIxLCJleHAiOjE2OTE3MzUwMjEsImlzcyI6IkoifQ.bOf-vAxGzuzNOlG30joaGDMPJIYU5Y6wyY4NOSbLJQM",
+"name": "나나",
+"userId": "Nana",
+"email": "nana@gmail.com",
+"contact": "010-3245-2431",
+"isAdmin": false,
+"joinedAt": "2023-08-10"
+}
+
+{
+"code": 200,
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ0N2MxZTZhYzk3OGZiZDg5NDc2ZWMiLCJuYW1lIjoi6re466Oo7Yq4IiwicGFzc3dvcmQiOiJJYW1hZ3Jvb3QiLCJjb250YWN0IjoiMDEwLTk3ODUtNjc4MSIsImVtYWlsIjoiZ3Jvb3RAZ21haWwuY29tIiwiam9pbmVkQXQiOiIyMDIzLTA4LTEwIiwiaWF0IjoxNjkxNjQ3MDA2LCJleHAiOjE2OTE3MzM0MDYsImlzcyI6IkoifQ.5NR8yb4LVv7KwGJxPPLp19MMIEXuVzUlop49VnncI0s",
+"name": "그루트",
+"userId": "Groot",
+"email": "groot@gmail.com",
+"contact": "010-9785-6781",
+"isAdmin": false,
+"joinedAt": "2023-08-10"
+}
+
+{
+"code": 200,
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NGQ0N2NkODZhYzk3OGZiZDg5NDc2ZWUiLCJuYW1lIjoi67mZ67SJIiwicGFzc3dvcmQiOiJib25nYm9uZ2RyZWFtIiwiY29udGFjdCI6IjAxMC05NzQ1LTEyMzQiLCJlbWFpbCI6ImJpbmdib25nQGdtYWlsLmNvbSIsImpvaW5lZEF0IjoiMjAyMy0wOC0xMCIsImlhdCI6MTY5MTY0NzkyMiwiZXhwIjoxNjkxNzM0MzIyLCJpc3MiOiJKIn0.XBFWlr3wwsoR9tx0uvnHcK4LVhCol37Dvy8VzxY_yd4",
+"name": "빙봉",
+"userId": "Bing Bong",
+"email": "bingbong@gmail.com",
+"contact": "010-9745-1234",
+"isAdmin": false,
+"joinedAt": "2023-08-10"
+}

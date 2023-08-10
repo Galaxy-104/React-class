@@ -1,5 +1,5 @@
 const config = require('./config')
-const jwt = requrire('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 
 
 const generateToken = (user) => { // 토큰 생성

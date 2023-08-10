@@ -13,9 +13,14 @@ mongoose.connect(config.MONGODB_URL)
 .then(() => console.log('mongodb connected...'))
 .catch(e => console.log(`failed to connect mongodb: ${e}`))
 
+app.use(express.json()) // request body 파싱
+app.use(logger('tiny'))
+
 // 라우터 핸들러함수 임포트
 app.use('/api/users', usersRouter)
 app.use('/api/books', booksRouter)
+
+
 
 app.listen(3000, () => {
     console.log(`Example app listening on port 3000`)
