@@ -1,16 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-import PhotoGallery from './PhotoGallery'
+import Signs from './questions/question3/Signs'
 
-class App extends Component {
-  render(){
-    return (
-      <div className="App">
-       <PhotoGallery/>
-      </div>
-    )
-  }
+function App(){
+  return (
+    <div className='App'>
+      <Signs></Signs>
+    </div>
+  )
 }
+
 
 export default App;
