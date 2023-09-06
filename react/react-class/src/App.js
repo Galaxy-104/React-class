@@ -30,10 +30,9 @@ class App extends Component{
     this.setState({ toggle: !this.state.toggle})
   }
   changeKeyword = () => {
-    console.log(this.searchInput.current.value, this.state.products)
     this.setState({ searchedProducts: this.state.products.filter(product => {
-      console.log(product.name.includes(this.searchInput.current.value))
-      return product.name.toLowerCase().includes(this.searchInput.current.value.toLowerCase())
+      return product.name.toLowerCase().includes(this.searchInput.current.value.toLowerCase()) ||
+      product.product_type.toLowerCase().includes(this.searchInput.current.value.toLowerCase())
     })})
   }
 
@@ -45,7 +44,9 @@ class App extends Component{
       <div className='App'>
         <Nav changeToggle={this.changeToggle} searchInput={this.searchInput} changeKeyword={this.changeKeyword}/>
         {products.length === 0? console.log('로딩중') : 
-        toggle? <ProductList products={products}/> : <ProductList products={[...products].sort((p1, p2) => p1.price - p2.price)}/>}
+        searchedProducts.length === 0? 
+        toggle? <ProductList products={products}/> : <ProductList products={[...products].sort((p1, p2) => p1.price - p2.price)}/> :
+        toggle? <ProductList products={searchedProducts}/> : <ProductList products={[...searchedProducts].sort((p1, p2) => p1.price - p2.price)}/>}
       </div>
     )
     
