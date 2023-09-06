@@ -1,0 +1,21 @@
+.header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: 1px 1px 5px 5px darkgray;
+    background: white;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.search-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

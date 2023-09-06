@@ -1,9 +1,7 @@
 import React, { Component } from "react";
+import './product.css'
 
 class Product extends Component{
-    constructor(props){
-        super(props)
-    }
 
     render(){
         const { products } = this.props
@@ -25,3 +23,5 @@ class Product extends Component{
         ) 
     }
 }
+
+export default Product

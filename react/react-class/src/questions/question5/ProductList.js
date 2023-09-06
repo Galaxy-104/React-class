@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import Product from "./Product";
 
 class ProductList extends Component{
-    constructor(props){
-        super(props)
-    }
 
     render(){
         const { products } = this.props
@@ -16,3 +13,4 @@ class ProductList extends Component{
     }
 }
 
+export default ProductList
