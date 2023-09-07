@@ -1,55 +1,79 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
-import Nav from './questions/question5/Nav';
-import ProductList from './questions/question5/ProductList';
+import Button from './class/Javascript/Button';
+import Sidebar from './questions/question6/Sidebar';
 
+const menus = [
+  {
+    icon: '♜',
+    title: 'HOME'
+  },
+  {
+    icon: '♞',
+    title: 'ABOUT'
+  },
+  {
+    icon: '☻',
+    title: 'SETTING'
+  },
+  {
+    icon: '♜',
+    title: 'HOME'
+  },
+  {
+    icon: '♞',
+    title: 'ABOUT'
+  },
+  {
+    icon: '☻',
+    title: 'SETTING'
+  }
+]
 
 class App extends Component{
+
   constructor(props){
     super(props)
-    this.searchInput = React.createRef()
+    this.selectSidebar = React.createRef()
   }
 
   state = {
-    toggle: true,
-    products: [],
-    keyword: '',
-    searchedProducts: []
+    toggleSidebar: false,
+    count: 0
   }
 
+  toggleSidebar = () => {
+    this.setState({ toggleSidebar: !this.state.toggleSidebar})
+  }
+  closeSidebar = (e) => {
+    if(this.state.toggleSidebar && !e.target.classList.contains(this.selectSidebar.current)){
+      
+      // this.setState({ toggleSidebar: false })
+      this.setState({ count: this.state.count +1})
+    }
+  }
   componentDidMount(){
-    fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
-    .then( res => res.json() )
-    .then( result => {
-      this.setState({ products: result })
-    })
+    window.addEventListener('click', this.closeSidebar)
   }
-
-  changeToggle = () => {
-    this.setState({ toggle: !this.state.toggle})
-  }
-  changeKeyword = () => {
-    this.setState({ searchedProducts: this.state.products.filter(product => {
-      return product.name.toLowerCase().includes(this.searchInput.current.value.toLowerCase()) ||
-      product.product_type.toLowerCase().includes(this.searchInput.current.value.toLowerCase())
-    })})
-  }
+  // componentWillUnmount(){
+  //   window.removeEventListener('click', )
+  // }
 
   render(){
-    const { toggle, products, keyword, searchedProducts } = this.state
-    console.log(toggle, keyword)
-    console.log(searchedProducts)
+    const { toggleSidebar, count } = this.state
+    console.log(count)
+    console.log(this.selectSidebar)
     return (
       <div className='App'>
-        <Nav changeToggle={this.changeToggle} searchInput={this.searchInput} changeKeyword={this.changeKeyword}/>
-        {products.length === 0? console.log('로딩중') : 
-        searchedProducts.length === 0? 
-        toggle? <ProductList products={products}/> : <ProductList products={[...products].sort((p1, p2) => p1.price - p2.price)}/> :
-        toggle? <ProductList products={searchedProducts}/> : <ProductList products={[...searchedProducts].sort((p1, p2) => p1.price - p2.price)}/>}
+        <Button handleClick={this.toggleSidebar}>사이드바</Button>
+        <Sidebar open={toggleSidebar} select={this.selectSidebar}>
+          {menus.map((menu, id) => {
+            return <div className='menu' key={id} onClick={this.toggleSidebar}>{menu.icon} {menu.title}</div>
+          })}
+        </Sidebar>
       </div>
     )
-    
   }
 }
 
