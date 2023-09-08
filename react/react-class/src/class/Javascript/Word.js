@@ -1,5 +1,5 @@
 import React from "react"
-import Button from "./class/Javascript/Button"
+import Button from "./Button"
 
 function Word({ handleRemove, w, id}){
     const wordStyle = {
