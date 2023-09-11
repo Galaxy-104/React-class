@@ -1,3 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
-
+.App{ 
+    width: 30%; 
+    margin: 200px auto; 
+} 
+.Upload{ 
+    display: none; 
+}

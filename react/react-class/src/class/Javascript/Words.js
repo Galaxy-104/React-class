@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const dummyData = [
+const words = [
     {
         word: 'apple',
         meaning: '사과'
@@ -48,3 +48,4 @@ const dummyData = [
   
 ]
 
+export default words
