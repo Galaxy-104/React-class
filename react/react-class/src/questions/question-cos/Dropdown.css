@@ -1,0 +1,7 @@
+.dropdown{
+    display: none;
+    justify-content: space-around;
+}
+.dropdown.open{
+    display: flex;
+}

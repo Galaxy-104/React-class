@@ -1,8 +1,9 @@
 import React from "react";
+import './Dropdown.css'
 
-function Dropdown({ children, className }){
+function Dropdown({ children, id, target, isMouseOver }){
     return (
-        <div className={className}>
+        <div id={id} className={`dropdown ${isMouseOver && target === id ? "open" : ""}`}>
             {children}
         </div>
     )
